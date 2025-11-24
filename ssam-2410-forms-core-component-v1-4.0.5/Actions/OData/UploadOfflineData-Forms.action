@@ -1,0 +1,12 @@
+{
+  "Service": "/MirataFormsCoreComponents/Services/MirataAPI.service",
+  "_Type": "Action.Type.OfflineOData.Upload",
+  "OnFailure": "/MirataFormsCoreComponents/Rules/Sync/OnUploadFailure-Forms.js",
+  "UploadCategories": [
+    "LogInfosUpload",
+    "SubmissionsUpload"
+  ],
+  "ActionResult": {
+    "_Name": "result"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "your-organization-id.integration-data-mapping.work-order-context-binding",
+  "organizationId": "your-organization-id",
+  "name": "Work Order Context Binding",
+  "description": "Returns the SSAM context binding object for a work order or operation",
+  "status": true,
+  "updatedBy": "",
+  "updatedAt": 0,
+  "type": "string",
+  "group": "SSAM UX Evaluation",
+  "integration": "MDK",
+  "definition": "{\n  \"integration-data\": \"/MirataFormsUxComponents/Rules/Forms/DataMapping/WorkOrders/WorkOrderOrOperationContextBinding.js\"\n}"
+}

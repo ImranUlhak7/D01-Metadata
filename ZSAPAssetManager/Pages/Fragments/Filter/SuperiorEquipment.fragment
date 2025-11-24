@@ -1,0 +1,29 @@
+{
+    "_Name": "SuperiorEquipmentFilter",
+    "_Type": "Control.Type.FormCell.ListPicker",
+    "AllowMultipleSelection": true,
+    "IsPickerDismissedOnSelection": true,
+    "AllowDefaultValueIfOneItem": true,
+    "IsSearchCancelledAfterSelection": true,
+    "Search": {
+        "Enabled": true,
+        "Delay": 500,
+        "MinimumCharacterThreshold": 3,
+        "Placeholder": "$(L,search)",
+        "BarcodeScanner": true
+    },
+    "Caption": "SuperiorEquipm",
+    "PlaceHolder": "",
+    "Value": "{SuperiorEquip}",
+    "PickerItems": {
+        "DisplayValue": "{SuperiorEquip}",
+        "ReturnValue": "{SuperiorEquip}",
+        "Target": {
+            "EntitySet": "MyEquipments",
+            "Service": "/SAPAssetManager/Services/AssetManager.service",
+            "QueryOptions": "$filter=SuperiorEquip ne ''&$orderby=SuperiorEquip"
+        }
+    },
+    "FilterProperty": "SuperiorEquip",
+    "OnValueChange": "/SAPAssetManager/Rules/Filter/RedrawFilterToolbar.js"
+}

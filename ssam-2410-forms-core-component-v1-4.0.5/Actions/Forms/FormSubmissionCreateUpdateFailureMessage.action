@@ -1,0 +1,6 @@
+{
+    "Message": "Create Mirata Submission Failed!",
+    "Duration": 4,
+    "Animated": true,
+    "_Type": "Action.Type.BannerMessage"
+}

@@ -1,0 +1,23 @@
+{
+	"Onboarding": {
+		"Schema": "sapmobilesvcs",
+		"TimeZone": "UTC",
+		"URL": ""
+	},
+	"CF": {
+		"Target": "https://api.cf.us10-001.hana.ondemand.com",
+		"Organization": "802d99ef-296e-4d43-8ec7-91a53729fc8b",
+		"Space": "36dbde54-1c41-460e-aa2e-57759d48ade2"
+	},
+	"MobileService": {
+		"Type": "standard",
+		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.us10.hana.ondemand.com/cockpit/v1/org/802d99ef-296e-4d43-8ec7-91a53729fc8b/space/36dbde54-1c41-460e-aa2e-57759d48ade2",
+		"AppId": "com.sap.patterson.2410dev.imran",
+		"Destination": []
+	},
+	"Build": {
+		"SourceMap": true,
+		"TSTarget": "es6",
+		"WMF": true
+	}
+}

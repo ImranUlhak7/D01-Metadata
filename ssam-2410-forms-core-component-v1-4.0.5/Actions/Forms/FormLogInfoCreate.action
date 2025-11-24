@@ -1,0 +1,30 @@
+{
+    "_Type": "Action.Type.ODataService.CreateEntity",
+    "Target": {
+        "EntitySet": "LogInfos",
+        "Service": "/MirataFormsCoreComponents/Services/MirataAPI.service"
+    },
+    "Properties": {
+        "id": "#Property:id",
+        "eventType": "#Property:eventType",
+        "message": "#Property:message",
+        "statusCode": "#Property:statusCode",
+        "eventTime": "#Property:eventTime",
+        "data": "#Property:data",
+        "stack": "#Property:stack",
+        "userId": "#Property:userId"
+    },
+    "Headers": {
+        "OfflineOData.RemoveAfterUpload": true,
+        "OfflineOData.TransactionID": "#Property:id"
+    },
+    "RequestOptions": {
+        "UploadCategory": "LogInfosUpload"
+    },
+    "OnFailure": "/MirataFormsCoreComponents/Actions/Forms/FormLogInfoCreateFailureMessage.action",
+    "ActionResult": {
+        "_Name": "FormLogInfoCreate"
+    },
+    "ShowActivityIndicator": true,
+    "ActivityIndicatorText" : "Creating a Mirata logging information record"
+}

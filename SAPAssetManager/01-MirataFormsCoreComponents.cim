@@ -1,0 +1,30 @@
+{
+	"ApplicationName": "MirataFormsCoreComponents",
+	"ProjectName": "ssam-2410-forms-core-component-v1-4.0.4",
+	"IntegrationPoints": [
+		{
+			"Source": "/MirataFormsCoreComponents/Rules/ApplicationEvents/ApplicationOnSync.js",
+			"Target": "/SAPAssetManager/Rules/ApplicationEvents/ApplicationOnSync.js"
+		},
+		{
+			"Source": "/MirataFormsCoreComponents/Rules/OData/Download/DownloadActionsOrRulesSequence.js",
+			"Target": "/SAPAssetManager/Rules/OData/Download/DownloadActionsOrRulesSequence.js"
+		},
+		{
+			"Source": "/MirataFormsCoreComponents/i18n/i18n.properties",
+			"Target": "/SAPAssetManager/i18n/i18n.properties"
+		},
+		{
+			"Source": "/MirataFormsCoreComponents/i18n/i18n_en.properties",
+			"Target": "/SAPAssetManager/i18n/i18n_en.properties"
+		},
+		{
+			"Source": "/MirataFormsCoreComponents/Styles/Styles.dark.less",
+			"Target": "/SAPAssetManager/Styles/Styles.dark.less"
+		},
+		{
+			"Source": "/MirataFormsCoreComponents/Styles/Styles.less",
+			"Target": "/SAPAssetManager/Styles/Styles.less"
+		}
+	]
+}

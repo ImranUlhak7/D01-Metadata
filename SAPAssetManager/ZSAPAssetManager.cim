@@ -1,0 +1,19 @@
+{
+	"ProjectName": "ZSAPAssetManager",
+	"ApplicationName": "ZSAPAssetManager",
+	"ComponentVersion": "1",
+	"IntegrationPoints": [
+		{
+			"Source": "/ZSAPAssetManager/Pages/ZOverview.page",
+			"Target": "/SAPAssetManager/Pages/Overview.page"
+		},
+		{
+			"Source": "/ZSAPAssetManager/Pages/SideMenuDrawer.page",
+			"Target": "/SAPAssetManager/Pages/SideMenuDrawer.page"
+		},
+		{
+			"Source": "/ZSAPAssetManager/Rules/OverviewPage/MyWorkSection/MyWorkSectionQueryOption.js",
+			"Target": "/SAPAssetManager/Rules/OverviewPage/MyWorkSection/MyWorkSectionQueryOption.js"
+		}
+	]
+}

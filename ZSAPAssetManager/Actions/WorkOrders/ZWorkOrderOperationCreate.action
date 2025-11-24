@@ -1,0 +1,23 @@
+{
+    "_Type": "Action.Type.ODataService.CreateRelatedEntity",
+    "Target": {
+        "EntitySet": "MyWorkOrderOperations",
+        "Service": "/SAPAssetManager/Services/AssetManager.service"
+    },
+    "Properties": {
+        "OperationNo": "/SAPAssetManager/Rules/WorkOrders/Operations/CreateUpdate/OperationLocalID.js",
+        "OperationShortText": "",
+        "ControlKey": "",
+        "OperationEquipment": "",
+        "OperationFunctionLocation": "",
+        "MainWorkCenterPlant": "",
+        "MainWorkCenter": "",
+        "PersonNum": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationPersonNum.js",
+        "StandardTextKey": ""
+    },
+    "Headers": {
+        "OfflineOData.RemoveAfterUpload": "true",
+        "OfflineOData.TransactionID": "/SAPAssetManager/Rules/WorkOrders/Operations/CreateUpdate/OperationTransactionID.js"
+    },
+    "ParentLink": "/SAPAssetManager/Rules/WorkOrders/Operations/CreateUpdate/WorkOrderOperationCreateUpdateLinks.js"
+}

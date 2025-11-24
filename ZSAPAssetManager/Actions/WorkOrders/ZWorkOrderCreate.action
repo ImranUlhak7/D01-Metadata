@@ -1,0 +1,31 @@
+{
+    "_Type": "Action.Type.ODataService.CreateEntity",
+    "Target": {
+        "EntitySet": "MyWorkOrderHeaders",
+        "Service": "/SAPAssetManager/Services/AssetManager.service"
+    },
+    "Properties": {
+        "OrderId": "/SAPAssetManager/Rules/WorkOrders/CreateUpdate/WorkOrderLocalID.js",
+        "OrderDescription": "",
+        "PlanningPlant": "",
+        "OrderType": "",
+        "Priority": "",
+        "HeaderFunctionLocation": "",
+        "HeaderEquipment": "",
+        "BusinessArea": "",
+        "MainWorkCenterPlant": "",
+        "MainWorkCenter": "",
+        "CreationDate": "/SAPAssetManager/Rules/DateTime/CurrentDateTime.js",
+        "CreationTime": "/SAPAssetManager/Rules/DateTime/CurrentTime.js",
+        "AccountingIndicator":"",
+        "MaintenanceActivityType": ""
+    },
+    "Headers": {
+        "OfflineOData.RemoveAfterUpload": "true",
+        "OfflineOData.TransactionID": "/SAPAssetManager/Rules/WorkOrders/CreateUpdate/WorkOrderLocalID.js"
+    },
+    "CreateLinks": "/SAPAssetManager/Rules/WorkOrders/CreateUpdate/WorkOrderCreateUpdateLinks.js",
+    "OnFailure": "/SAPAssetManager/Actions/CreateUpdateDelete/CreateEntityFailureMessage.action",
+    "ShowActivityIndicator": true,
+    "ActivityIndicatorText" : "  "
+}

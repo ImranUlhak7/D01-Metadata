@@ -1,0 +1,8 @@
+{
+	"Target": {
+		"ReadLink": "#Property:ReadLink",
+		"EntitySet": "#Property:EntitySet",
+		"Service": "/MirataFormsCoreComponents/Services/MirataAPI.service"
+	},
+	"_Type": "Action.Type.ODataService.DownloadMedia"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "your-organization-id.integration-action.ssam-ux-display-form-for-work-order",
+  "organizationId": "your-organization-id",
+  "actionDescriptorList": [],
+  "status": true,
+  "updatedBy": "",
+  "updatedAt": 0,
+  "name": "SSAM UX Display Form for Work Order",
+  "description": "Display a UX form and provide a work order or operation data context",
+  "parameterDescriptionList": [
+    {
+      "key": "form-id",
+      "valueFieldType": "string",
+      "valueRequired": true,
+      "description": "ID of form to display"
+    },
+    {
+      "key": "work-order-id",
+      "valueFieldType": "string",
+      "valueRequired": true,
+      "description": "Work order number"
+    },
+    {
+      "key": "operation-id",
+      "valueFieldType": "string",
+      "valueRequired": false,
+      "description": "Operation number (if form is operation-centric)"
+    }
+  ],
+  "actionRequestType": "EmbeddedIntegrationEvent",
+  "actionRequest": {
+    "name": "",
+    "test": false,
+    "integration": "MDK",
+    "definition": "{\n  \"key\": \"rule\",\n  \"value\": \"/MirataFormsUxComponents/Rules/Forms/Navigation/WorkOrders/NavToWorkOrderUxForm.js\"\n}"
+  }
+}

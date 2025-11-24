@@ -1,0 +1,7 @@
+{
+    "Message": "$(L,zforms_sync_in_progress)",
+    "CompletionMessage": "$(L,zforms_sync_success)",
+    "CompletionTimeout": 3,
+    "OnSuccess": "/MirataFormsCoreComponents/Rules/ApplicationEvents/SyncData-Forms.js",
+    "_Type": "Action.Type.ProgressBanner"
+}

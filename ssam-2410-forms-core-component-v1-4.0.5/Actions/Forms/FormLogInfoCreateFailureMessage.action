@@ -1,0 +1,6 @@
+{
+    "Message": "Create Mirata logging information record failed!",
+    "Duration": 4,
+    "Animated": true,
+    "_Type": "Action.Type.BannerMessage"
+}

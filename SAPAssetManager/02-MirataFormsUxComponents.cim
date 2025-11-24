@@ -1,0 +1,18 @@
+{
+	"ApplicationName": "MirataFormsUxComponents",
+	"ProjectName": "ssam-2410-forms-ux-component-v1-4.0.4",
+	"IntegrationPoints": [
+		{
+			"Source": "/MirataFormsUxComponents/Rules/Forms/Navigation/WorkOrders/NavToInitialWorkOrderUxForm.js",
+			"Target": "/SAPAssetManager/Rules/WorkOrders/WorkOrdersListViewNav.js"
+		},
+		{
+			"Source": "/MirataFormsUxComponents/Rules/WorkOrders/WorkOrderLibrary.js",
+			"Target": "/SAPAssetManager/Rules/WorkOrders/WorkOrderLibrary.js"
+		},
+		{
+			"Source": "/MirataFormsUxComponents/Rules/Supervisor/SupervisorLibrary.js",
+			"Target": "/SAPAssetManager/Rules/Supervisor/SupervisorLibrary.js"
+		}
+		]
+}

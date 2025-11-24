@@ -1,0 +1,57 @@
+{
+	"Service": "/MirataFormsCoreComponents/Services/MirataAPI.service",
+	"DefiningRequests": [
+		{
+			"Name": "DataTableData",
+			"Query": "DataTableData"
+		},
+		{
+			"Name": "DataTableMasters",
+			"Query": "DataTableMasters"
+		},
+		{
+			"Name": "Definitions",
+			"Query": "Definitions"
+		},
+		{
+			"Name": "Events",
+			"Query": "Events"
+		},
+		{
+			"Name": "Images",
+			"Query": "Images",
+			"AutomaticallyRetrievesStreams": true
+		},
+		{
+			"Name": "Mappings",
+			"Query": "Mappings"
+		},
+		{
+			"Name": "SubmissionImages",
+			"Query": "SubmissionImages",
+			"AutomaticallyRetrievesStreams": true
+		},
+		{
+			"Name": "Submissions",
+			"Query": "Submissions"
+		},
+		{
+			"Name": "UserGroups",
+			"Query": "UserGroups"
+		},
+		{
+			"Name": "UserInfo",
+			"Query": "UserInfo"
+		},
+		{
+			"Name": "Users",
+			"Query": "Users"
+		}
+	],
+	"_Type": "Action.Type.OfflineOData.Download",
+	"OnSuccess": "/MirataFormsCoreComponents/Rules/Sync/DownloadOfflineOData-Forms-Success.js",
+	"OnFailure": "/MirataFormsCoreComponents/Rules/Sync/DownloadOfflineOData-Forms-Failure.js",
+	"ActionResult": {
+			"_Name": "result"
+	}
+}

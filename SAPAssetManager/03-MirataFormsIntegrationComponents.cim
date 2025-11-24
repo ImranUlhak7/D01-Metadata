@@ -1,0 +1,54 @@
+{
+	"ApplicationName": "MirataFormsIntegrationComponents",
+	"ProjectName": "ssam-2410-forms-integration-component-v1-4.0.4",
+	"IntegrationPoints": [
+		{
+			"Source": "/MirataFormsIntegrationComponents/Pages/WorkOrders/Operations/WorkOrderOperationDetails.page",
+			"Target": "/SAPAssetManager/Pages/WorkOrders/Operations/WorkOrderOperationDetails.page"
+		},
+		{
+			"Source": "/MirataFormsIntegrationComponents/Pages/WorkOrders/Operations/WorkOrderOperationDetailsWithObjectCards.page",
+			"Target": "/SAPAssetManager/Pages/WorkOrders/Operations/WorkOrderOperationDetailsWithObjectCards.page"
+		},
+		{
+			"Source": "/MirataFormsIntegrationComponents/Pages/Fragments/WorkOrder/WorkOrderOperations/WorkOrderOperationActionbarItems.fragment",
+			"Target": "/SAPAssetManager/Pages/Fragments/WorkOrder/WorkOrderOperations/WorkOrderOperationActionbarItems.fragment"
+		},
+		{
+			"Source": "/MirataFormsIntegrationComponents/Rules/Notes/NoteLibrary.js",
+			"Target": "/SAPAssetManager/Rules/Notes/NoteLibrary.js"
+		},
+		{
+			"Source": "/MirataFormsIntegrationComponents/Rules/Operations/OperationsObjectCardCollection/ConfirmAllButtonOnPress.js",
+			"Target": "/SAPAssetManager/Rules/Operations/OperationsObjectCardCollection/ConfirmAllButtonOnPress.js"
+		},
+		{
+			"Source": "/MirataFormsIntegrationComponents/Rules/Operations/MobileStatus/OperationCompleteStatus.js",
+			"Target": "/SAPAssetManager/Rules/Operations/MobileStatus/OperationCompleteStatus.js"
+		},
+		{
+			"Source": "/MirataFormsIntegrationComponents/Rules/Operations/MobileStatus/OperationConfirmStatus.js",
+			"Target": "/SAPAssetManager/Rules/Operations/MobileStatus/OperationConfirmStatus.js"
+		},
+		{
+			"Source": "/MirataFormsIntegrationComponents/Rules/Operations/MobileStatus/OperationMobileStatusLibrary.js",
+			"Target": "/SAPAssetManager/Rules/Operations/MobileStatus/OperationMobileStatusLibrary.js"
+		},
+		{
+			"Source": "/MirataFormsIntegrationComponents/Rules/Operations/MobileStatus/OperationStatusUpdateSequenceClass.js",
+			"Target": "/SAPAssetManager/Rules/Operations/MobileStatus/OperationStatusUpdateSequenceClass.js"
+		},
+		{
+			"Source": "/MirataFormsIntegrationComponents/Rules/WorkOrders/Operations/WorkOrderOperationsConfirmation.js",
+			"Target": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationsConfirmation.js"
+		},
+		{
+			"Source": "/MirataFormsIntegrationComponents/Rules/Forms/Navigation/ZCreateWOPressEventHandler.js",
+			"Target": "/SAPAssetManager/Rules/WorkOrders/CreateUpdate/WorkOrderCreateNav.js"
+		},
+		{
+			"Source": "/MirataFormsIntegrationComponents/Rules/Forms/Navigation/ZCreateWOPressEventHandler.js",
+			"Target": "/SAPAssetManager/Rules/WorkOrders/CreateUpdate/WorkOrderCreateNav.js"
+		}
+	]
+}

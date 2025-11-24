@@ -1,0 +1,10 @@
+{
+    "Service": "/MirataFormsCoreComponents/Services/MirataAPI.service",
+    "_Type": "Action.Type.ODataService.Initialize",
+    "OnFailure": "/MirataFormsCoreComponents/Rules/Sync/OnReInitializeOfflineODataFailure-Forms.js",
+    "ShowActivityIndicator": true,
+    "ActivityIndicatorText": "$(L,zforms_loading)",
+    "ActionResult": {
+        "_Name": "result"
+    }
+}

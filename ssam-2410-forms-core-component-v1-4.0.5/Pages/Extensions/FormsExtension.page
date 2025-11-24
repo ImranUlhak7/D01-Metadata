@@ -1,0 +1,79 @@
+{
+	"Caption": "Mirata Forms",
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "right",
+				"IconText": "Unlocked",
+				"Caption": "Unlocked",
+				"Icon": "sap-icon://unlocked",
+				"Visible": false,
+				"Style": "MirataIconDisabled",
+				"_Name": "FormUnlockDisabled"
+			},
+			{
+				"Position": "right",
+				"IconText": "Locked",
+				"Caption": "Locked",
+				"Icon": "sap-icon://locked",
+				"Visible": false,
+				"Style": "MirataIconEnabled",
+				"OnPress": "/MirataFormsCoreComponents/Rules/Forms/OnFormUnlockPressed.js",
+				"_Name": "FormLockEnabled"
+			},
+			{
+				"Position": "right",
+				"IconText": "Locked",
+				"Caption": "Locked",
+				"Icon": "sap-icon://locked",
+				"Visible": false,
+				"Style": "MirataIconDisabled",
+				"_Name": "FormLockDisabled"
+			},
+			{
+				"Position": "right",
+				"IconText": "Save",
+				"Caption": "Save",
+				"Icon": "sap-icon://save",
+				"Visible": false,
+				"Style": "MirataIconEnabled",
+				"OnPress": "/MirataFormsCoreComponents/Rules/Forms/OnFormSavePressed.js",
+				"_Name": "FormSaveEnabled"
+			},
+			{
+				"Position": "right",
+				"IconText": "Save",
+				"Caption": "Save",
+				"Icon": "sap-icon://save",
+				"Visible": false,
+				"Style": "MirataIconDisabled",
+				"_Name": "FormSaveDisabled"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Class": "FormsExtensionClass",
+			"Control": "FormExtensionControl",
+			"ExtensionProperties": {
+				"ContextData": "#Property:ContextData",
+				"FormId": "#Property:FormId",
+				"FormImageDataAction": "/MirataFormsCoreComponents/Actions/Forms/GetFormImageData.action",
+				"FormSave": "/MirataFormsCoreComponents/Rules/Forms/SubmissionCreateUpdate.js",
+				"FormSaveConfirm": "/MirataFormsCoreComponents/Actions/Forms/FormSaveConfirm.action",
+				"FormService": "/MirataFormsCoreComponents/Services/MirataAPI.service",
+				"FormSubmissionQueryOptions": "#Property:FormSubmissionQueryOptions",
+				"FormSubmissionImageDataAction": "/MirataFormsCoreComponents/Actions/Forms/GetSubmissionImageData.action"
+			},
+			"Module": "FormsExtensionModule",
+			"_Name": "FormExtensionControl",
+			"_Type": "Control.Type.Extension"
+		}
+	],
+	"_Name": "FormsExtensionControlPage",
+	"_Type": "Page",
+	"OnBackButtonPressed": "/MirataFormsCoreComponents/Rules/Forms/OnBackButtonPressed.js",
+	"OnActivityBackPressed": "/MirataFormsCoreComponents/Rules/Forms/OnActivityBackPressed.js",
+	"OnResume": "/MirataFormsCoreComponents/Rules/Forms/OnResumePage.js",
+	"OnReturning": "/MirataFormsCoreComponents/Rules/Forms/OnReturningPage.js"
+}

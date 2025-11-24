@@ -1,0 +1,20 @@
+{
+    "_Type": "Action.Type.ODataService.CreateEntity",
+    "Target": {
+        "Service": "/MirataFormsCoreComponents/Services/MirataAPI.service",
+        "EntitySet": "SubmissionImagesClient"
+    },
+    "Properties": {
+        "submissionId": "#Property:submissionId",
+        "imageId": "#Property:imageId",
+        "contentType": "#Property:contentType",
+        "encoding": "#Property:encoding",
+        "dataURL": "#Property:dataURL"
+    },
+    "OnFailure": "/MirataFormsCoreComponents/Actions/Forms/FormSubmissionCreateUpdateFailureMessage.action",
+    "ActionResult": {
+        "_Name": "FormSubmissionImagesClientCreateResult"
+    },
+    "ShowActivityIndicator": true,
+    "ActivityIndicatorText" : "Creating Mirata Form Submission Image (Client)"
+}

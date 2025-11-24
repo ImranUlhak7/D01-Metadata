@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<edmx:Edmx
+  xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+  xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+  xmlns:sap="http://www.sap.com/Protocols/SAPData"
+  Version="1.0">
+  <edmx:DataServices m:DataServiceVersion="2.0">
+    <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="MirataForms" xml:lang="en">
+      <EntityType Name="FormUser">
+        <Key>
+          <PropertyRef Name="id" />
+        </Key>
+        <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="1024" />
+        <Property Name="organizationId" Type="Edm.String" Nullable="false" />
+        <Property Name="groupIdList" Type="Edm.String" Nullable="false" />
+        <Property Name="firstName" Type="Edm.String" Nullable="true" />
+        <Property Name="lastName" Type="Edm.String" Nullable="false" />
+        <Property Name="nickName" Type="Edm.String" Nullable="true" />
+        <Property Name="emailAddress" Type="Edm.String" Nullable="false" />
+        <Property Name="externalSystemUserId1" Type="Edm.String" Nullable="false" />
+        <Property Name="externalSystemUserId2" Type="Edm.String" Nullable="false" />
+        <Property Name="externalSystemUserId3" Type="Edm.String" Nullable="false" />
+        <Property Name="confirmedUser" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="providerName" Type="Edm.String" Nullable="false" />
+        <Property Name="status" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="updatedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="updatedAt" Type="Edm.DateTime" Nullable="false" />
+      </EntityType>
+      <EntityType Name="FormFunctionalGroup">
+        <Key>
+          <PropertyRef Name="id" />
+        </Key>
+        <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="1024" />
+        <Property Name="parentId" Type="Edm.String" Nullable="true" MaxLength="1024" />
+        <Property Name="organizationId" Type="Edm.String" Nullable="false" />
+        <Property Name="name" Type="Edm.String" Nullable="false" MaxLength="1024" />
+        <Property Name="description" Type="Edm.String" Nullable="true" />
+        <Property Name="roleList" Type="Edm.String" Nullable="false" />
+        <Property Name="status" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="updatedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="updatedAt" Type="Edm.DateTime" Nullable="false" />
+      </EntityType>
+      <EntityType Name="FormDefinitionMeta">
+        <Key>
+          <PropertyRef Name="id" />
+          <PropertyRef Name="version" />
+        </Key>
+        <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="1024" />
+        <Property Name="version" Type="Edm.Int32" Nullable="false" />
+        <Property Name="organizationId" Type="Edm.String" Nullable="false" />
+        <Property Name="formType" Type="Edm.String" Nullable="false" />
+        <Property Name="uxForm" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="name" Type="Edm.String" Nullable="false" />
+        <Property Name="description" Type="Edm.String" Nullable="true" />
+        <Property Name="published" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="status" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="updatedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="updatedAt" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="dependencies" Type="Edm.String" Nullable="false" />
+        <Property Name="definition" Type="Edm.String" Nullable="false" />
+        <NavigationProperty
+          Name="submissions"
+          Relationship="MirataForms.FormDefinitionMeta_to_FormSubmissionMetas"
+          FromRole="FormDefinitionMeta"
+          ToRole="FormSubmissionMeta" />
+      </EntityType>
+      <EntityType Name="IntegrationDataMapping">
+        <Key>
+          <PropertyRef Name="id" />
+        </Key>
+        <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="1024" />
+        <Property Name="definition" Type="Edm.String" Nullable="false" />
+        <Property Name="type" Type="Edm.String" Nullable="false" />
+        <Property Name="updatedAt" Type="Edm.DateTime" Nullable="false" />
+      </EntityType>
+      <EntityType Name="IntegrationEvent">
+        <Key>
+          <PropertyRef Name="id" />
+        </Key>
+        <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="1024" />
+        <Property Name="definition" Type="Edm.String" Nullable="false" />
+        <Property Name="updatedAt" Type="Edm.DateTime" Nullable="false" />
+      </EntityType>
+      <EntityType Name="FormSubmissionMeta">
+        <Key>
+          <PropertyRef Name="id" />
+        </Key>
+        <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="1024" />
+        <Property Name="version" Type="Edm.Int32" Nullable="false" />
+        <Property Name="baseVersion" Type="Edm.Int32" Nullable="false" />
+        <Property Name="organizationId" Type="Edm.String" Nullable="false" />
+        <Property Name="definitionId" Type="Edm.String" Nullable="false" MaxLength="1024" />
+        <Property Name="definitionVersion" Type="Edm.Int32" Nullable="false" />
+        <Property Name="formType" Type="Edm.String" Nullable="false" />
+        <Property Name="assignedTo" Type="Edm.String" Nullable="true" />
+        <Property Name="assignedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="assignedAt" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="submittedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="submittedAt" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="createdBy" Type="Edm.String" Nullable="false" />
+        <Property Name="createdAt" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="status" Type="Edm.String" Nullable="false" />
+        <Property Name="headerInfo" Type="Edm.String" Nullable="false" />
+        <Property Name="responseData" Type="Edm.String" Nullable="false" />
+        <Property Name="backendUpdateList" Type="Edm.String" Nullable="false" />
+        <Property Name="transitionLogEntry" Type="Edm.String" Nullable="true" />
+        <Property Name="dependencies" Type="Edm.String" Nullable="true" />
+        <Property Name="images" Type="Edm.String" Nullable="true" />
+        <Property Name="submission" Type="Edm.String" Nullable="false" />
+        <NavigationProperty
+          Name="formDefinition"
+          Relationship="MirataForms.FormDefinitionMeta_to_FormSubmissionMetas"
+          FromRole="FormSubmissionMeta"
+          ToRole="FormDefinitionMeta" />
+      </EntityType>
+      <EntityType Name="FormDataTableMasterMeta">
+        <Key>
+          <PropertyRef Name="id" />
+        </Key>
+        <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="1024" />
+        <Property Name="organizationId" Type="Edm.String" Nullable="false" />
+        <Property Name="name" Type="Edm.String" Nullable="false" />
+        <Property Name="description" Type="Edm.String" Nullable="true" />
+        <Property Name="tableType" Type="Edm.String" Nullable="false" />
+        <Property Name="tableStorageType" Type="Edm.String" Nullable="false" />
+        <Property Name="valueFieldJSONSchema" Type="Edm.String" Nullable="false" />
+        <Property Name="externalDataTableInfo" Type="Edm.String" Nullable="true" />
+        <Property Name="dataTableQueryList" Type="Edm.String" Nullable="false" />
+        <Property Name="status" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="updatedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="updatedAt" Type="Edm.DateTime" Nullable="false" />
+        <NavigationProperty
+          Name="dataTableData"
+          Relationship="MirataForms.FormDataTableMasterMeta_to_FormDataTableDatas"
+          FromRole="FormDataTableMasterMeta"
+          ToRole="FormDataTableData" />
+      </EntityType>
+      <EntityType Name="FormDataTableData">
+        <Key>
+          <PropertyRef Name="id" />
+        </Key>
+        <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="1024" />
+        <Property Name="parentId" Type="Edm.String" Nullable="true" MaxLength="1024" />
+        <Property Name="dataTableId" Type="Edm.String" Nullable="true" MaxLength="1024" />
+        <Property Name="organizationId" Type="Edm.String" Nullable="true" />
+        <Property Name="key" Type="Edm.String" Nullable="false" />
+        <Property Name="value" Type="Edm.String" Nullable="false" />
+        <Property Name="updatedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="updatedAt" Type="Edm.DateTime" Nullable="false" />
+        <NavigationProperty
+          Name="master"
+          Relationship="MirataForms.FormDataTableMasterMeta_to_FormDataTableDatas"
+          FromRole="FormDataTableData"
+          ToRole="FormDataTableMasterMeta" />
+        <NavigationProperty
+          Name="children"
+          Relationship="MirataForms.FormDataTableData_to_FormDataTableDatas"
+          FromRole="FormDataTableDataParent"
+          ToRole="FormDataTableDataChildren" />
+        <NavigationProperty
+          Name="parent"
+          Relationship="MirataForms.FormDataTableData_to_FormDataTableDatas"
+          FromRole="FormDataTableDataChildren"
+          ToRole="FormDataTableDataParent" />
+      </EntityType>
+      <EntityType Name="FormImageMeta" m:HasStream="true">
+        <Key>
+          <PropertyRef Name="id" />
+        </Key>
+        <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="1024" />
+        <Property Name="organizationId" Type="Edm.String" Nullable="false" />
+        <Property Name="name" Type="Edm.String" Nullable="false" />
+        <Property Name="description" Type="Edm.String" Nullable="false" />
+        <Property Name="imageEncoding" Type="Edm.String" Nullable="false" />
+        <Property Name="imageType" Type="Edm.String" Nullable="false" />
+        <Property Name="status" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="published" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="updatedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="updatedAt" Type="Edm.DateTime" Nullable="false" />
+      </EntityType>
+      <EntityType Name="FormSubmissionImage" m:HasStream="true">
+        <Key>
+          <PropertyRef Name="submissionId" />
+          <PropertyRef Name="imageId" />
+        </Key>
+        <Property Name="submissionId" Type="Edm.String" Nullable="false" MaxLength="1024" />
+        <Property Name="imageId" Type="Edm.String" Nullable="false" MaxLength="1024" />
+        <Property Name="contentType" Type="Edm.String" Nullable="false" />
+        <Property Name="encoding" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="FormSubmissionImageClient">
+        <Key>
+          <PropertyRef Name="submissionId" />
+          <PropertyRef Name="imageId" />
+        </Key>
+        <Property Name="submissionId" Type="Edm.String" Nullable="false" MaxLength="1024" />
+        <Property Name="imageId" Type="Edm.String" Nullable="false" MaxLength="1024" />
+        <Property Name="contentType" Type="Edm.String" Nullable="false" />
+        <Property Name="encoding" Type="Edm.String" Nullable="true" />
+        <Property Name="dataURL" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="LogInfo">
+        <Key>
+          <PropertyRef Name="id" />
+        </Key>
+        <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="1024" />
+        <Property Name="eventType" Type="Edm.String" Nullable="false" />
+        <Property Name="message" Type="Edm.String" Nullable="false" />
+        <Property Name="statusCode" Type="Edm.Int32" Nullable="true" />
+        <Property Name="eventTime" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="data" Type="Edm.String" Nullable="false" />
+        <Property Name="stack" Type="Edm.String" Nullable="true" />
+        <Property Name="userId" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <Association Name="FormDataTableData_to_FormDataTableDatas">
+        <End Type="MirataForms.FormDataTableData" Multiplicity="1" Role="FormDataTableDataParent">
+          <OnDelete Action="None" />
+        </End>
+        <End Type="MirataForms.FormDataTableData" Multiplicity="*" Role="FormDataTableDataChildren" />
+        <ReferentialConstraint>
+          <Principal Role="FormDataTableDataParent">
+            <PropertyRef Name="id" />
+          </Principal>
+          <Dependent Role="FormDataTableDataChildren">
+            <PropertyRef Name="parentId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="FormDataTableMasterMeta_to_FormDataTableDatas">
+        <End Type="MirataForms.FormDataTableMasterMeta" Multiplicity="1" Role="FormDataTableMasterMeta">
+          <OnDelete Action="None" />
+        </End>
+        <End Type="MirataForms.FormDataTableData" Multiplicity="*" Role="FormDataTableData" />
+        <ReferentialConstraint>
+          <Principal Role="FormDataTableMasterMeta">
+            <PropertyRef Name="id" />
+          </Principal>
+          <Dependent Role="FormDataTableData">
+            <PropertyRef Name="dataTableId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="FormDefinitionMeta_to_FormSubmissionMetas">
+        <End Type="MirataForms.FormDefinitionMeta" Multiplicity="1" Role="FormDefinitionMeta">
+          <OnDelete Action="None" />
+        </End>
+        <End Type="MirataForms.FormSubmissionMeta" Multiplicity="*" Role="FormSubmissionMeta" />
+        <ReferentialConstraint>
+          <Principal Role="FormDefinitionMeta">
+            <PropertyRef Name="id" />
+            <PropertyRef Name="version" />
+          </Principal>
+          <Dependent Role="FormSubmissionMeta">
+            <PropertyRef Name="definitionId" />
+            <PropertyRef Name="definitionVersion" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <EntityContainer Name="DefaultContainer" m:IsDefaultEntityContainer="true" sap:supported-formats="json">
+        <EntitySet Name="Users" EntityType="MirataForms.FormUser" />
+        <EntitySet Name="UserInfo" EntityType="MirataForms.FormUser" />
+        <EntitySet Name="UserGroups" EntityType="MirataForms.FormFunctionalGroup" />
+        <EntitySet Name="Definitions" EntityType="MirataForms.FormDefinitionMeta" />
+        <EntitySet Name="Mappings" EntityType="MirataForms.IntegrationDataMapping" />
+        <EntitySet Name="Events" EntityType="MirataForms.IntegrationEvent" />
+        <EntitySet Name="Submissions" EntityType="MirataForms.FormSubmissionMeta" />
+        <EntitySet Name="DataTableMasters" EntityType="MirataForms.FormDataTableMasterMeta" />
+        <EntitySet Name="DataTableData" EntityType="MirataForms.FormDataTableData" />
+        <EntitySet Name="SubmissionImages" EntityType="MirataForms.FormSubmissionImage" />
+        <EntitySet Name="SubmissionImagesClient" EntityType="MirataForms.FormSubmissionImageClient" />
+        <EntitySet Name="Images" EntityType="MirataForms.FormImageMeta" />
+        <EntitySet Name="LogInfos" EntityType="MirataForms.LogInfo" />
+        <AssociationSet Name="FormDefinitionMeta_to_FormSubmissionMetas" Association="MirataForms.FormDefinitionMeta_to_FormSubmissionMetas">
+          <End EntitySet="Definitions" Role="FormDefinitionMeta" />
+          <End EntitySet="Submissions" Role="FormSubmissionMeta" />
+        </AssociationSet>
+        <AssociationSet Name="FormDataTableMasterMeta_to_FormDataTableDatas" Association="MirataForms.FormDataTableMasterMeta_to_FormDataTableDatas">
+          <End EntitySet="DataTableMasters" Role="FormDataTableMasterMeta" />
+          <End EntitySet="DataTableData" Role="FormDataTableData" />
+        </AssociationSet>
+        <AssociationSet Name="FormDataTableData_to_FormDataTableDatas" Association="MirataForms.FormDataTableData_to_FormDataTableDatas">
+          <End EntitySet="DataTableData" Role="FormDataTableDataParent" />
+          <End EntitySet="DataTableData" Role="FormDataTableDataChildren" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

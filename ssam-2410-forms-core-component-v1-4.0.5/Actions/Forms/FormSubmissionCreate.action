@@ -1,0 +1,44 @@
+{
+    "_Type": "Action.Type.ODataService.CreateEntity",
+    "Target": {
+        "EntitySet": "Submissions",
+        "Service": "/MirataFormsCoreComponents/Services/MirataAPI.service"
+    },
+    "Properties": {
+        "id": "#ClientData/SubmissionActionData/id",
+        "version": "#ClientData/SubmissionActionData/version",
+        "baseVersion": "#ClientData/SubmissionActionData/baseVersion",
+        "organizationId": "#ClientData/SubmissionActionData/organizationId",
+        "definitionId": "#ClientData/SubmissionActionData/definitionId",
+        "definitionVersion": "#ClientData/SubmissionActionData/definitionVersion",
+        "formType": "#ClientData/SubmissionActionData/formType",
+        "assignedTo": "#ClientData/SubmissionActionData/assignedTo",
+        "assignedBy": "#ClientData/SubmissionActionData/assignedBy",
+        "assignedAt": "#ClientData/SubmissionActionData/assignedAt",
+        "submittedBy": "#ClientData/SubmissionActionData/submittedBy",
+        "submittedAt": "#ClientData/SubmissionActionData/submittedAt",
+        "createdBy": "#ClientData/SubmissionActionData/createdBy",
+        "createdAt": "#ClientData/SubmissionActionData/createdAt",
+        "status": "#ClientData/SubmissionActionData/status",
+        "headerInfo": "#ClientData/SubmissionActionData/headerInfo",
+        "responseData": "#ClientData/SubmissionActionData/responseData",
+        "backendUpdateList": "#ClientData/SubmissionActionData/backendUpdateList",
+        "transitionLogEntry": "#ClientData/SubmissionActionData/transitionLogEntry",
+        "dependencies": "#ClientData/SubmissionActionData/dependencies",
+        "images": "#ClientData/SubmissionActionData/images",
+        "submission": "#ClientData/SubmissionActionData/submission"
+    },
+    "Headers": {
+        "OfflineOData.RemoveAfterUpload": "true",
+        "OfflineOData.TransactionID": "#ClientData/SubmissionActionData/id"
+    },
+    "RequestOptions": {
+        "UploadCategory": "SubmissionsUpload"
+    },
+    "OnFailure": "/MirataFormsCoreComponents/Actions/Forms/FormSubmissionCreateUpdateFailureMessage.action",
+    "ActionResult": {
+        "_Name": "FormSubmissionCreateUpdateResult"
+    },
+    "ShowActivityIndicator": true,
+    "ActivityIndicatorText" : "Creating Mirata Form Submission"
+}

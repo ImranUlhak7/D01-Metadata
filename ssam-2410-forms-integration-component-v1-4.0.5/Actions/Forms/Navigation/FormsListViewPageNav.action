@@ -1,0 +1,5 @@
+{
+    "_Type" : "Action.Type.Navigation",
+    "ModalPage": true,
+    "PageToOpen" : "/MirataFormsIntegrationComponents/Pages/Forms/FormsListView.page"
+}

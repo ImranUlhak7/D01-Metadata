@@ -1,0 +1,8 @@
+{
+  "_Type": "Action.Type.OfflineOData.UndoPendingChanges",
+  "Target": {
+    "Service": "/MirataFormsCoreComponents/Services/MirataAPI.service",
+    "EntitySet": "#Property:EntitySet",
+    "EditLink": "#Property:EditLink"
+  }
+}

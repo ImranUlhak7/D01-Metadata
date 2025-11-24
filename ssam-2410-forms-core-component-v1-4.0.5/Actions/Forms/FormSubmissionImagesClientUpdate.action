@@ -1,0 +1,19 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "Service": "/MirataFormsCoreComponents/Services/MirataAPI.service",
+        "EntitySet": "SubmissionImagesClient",
+        "ReadLink": "#Property:readLink"
+    },
+    "Properties": {
+        "contentType": "#Property:contentType",
+        "encoding": "#Property:encoding",
+        "dataURL": "#Property:dataURL"
+    },
+    "OnFailure": "/MirataFormsCoreComponents/Actions/Forms/FormSubmissionCreateUpdateFailureMessage.action",
+    "ActionResult": {
+        "_Name": "FormSubmissionImagesClientUpdateResult"
+    },
+    "ShowActivityIndicator": true,
+    "ActivityIndicatorText" : "Updating Mirata Form Submission Image (Client)"
+}

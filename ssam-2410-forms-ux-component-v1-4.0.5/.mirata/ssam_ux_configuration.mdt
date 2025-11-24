@@ -1,0 +1,49 @@
+{
+  "id": "your-organization-id.data-table-master.ssam-ux-configuration",
+  "organizationId": "your-organization-id",
+  "name": "SSAM UX Configuration",
+  "description": "SSAM UX feature configuration data",
+  "tableType": "simple",
+  "tableStorageType": "dynamo",
+  "valueFieldJSONSchema": {
+    "properties": {
+      "Initial": {
+        "type": "string",
+        "description": "ID of Initial UX Form",
+        "required": true
+      },
+      "Evaluation": {
+        "type": "string",
+        "description": "ID of Evaluation Integration Action",
+        "required": true
+      },
+      "Binding": {
+        "type": "string",
+        "description": "ID of Context Binding Integration Data Mapping",
+        "required": true
+      },
+      "Default": {
+        "type": "string",
+        "description": "ID of Default UX Form",
+        "required": true
+      },
+      "Display": {
+        "type": "string",
+        "description": "ID of Display UX Form Integration Action",
+        "required": true
+      }
+    },
+    "required": [
+      "Initial",
+      "Evaluation",
+      "Binding",
+      "Default",
+      "Display"
+    ]
+  },
+  "dataTableQueryList": [],
+  "updatedBy": "",
+  "updatedAt": 0,
+  "status": true,
+  "downloadTableForOfflineUse": true
+}

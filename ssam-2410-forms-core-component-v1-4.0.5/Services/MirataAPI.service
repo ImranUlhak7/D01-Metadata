@@ -1,0 +1,12 @@
+{
+	"DestinationName": "MIRATA_ODATA_API",
+	"OfflineEnabled": true,
+	"OfflineOptions": {
+		"ServiceOptions": {
+			"supportsBind": false
+		},
+		"StoreParameters": {
+			"EnableIndividualErrorArchiveDeletion": true
+		}
+	}
+}

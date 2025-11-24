@@ -1,0 +1,6 @@
+{
+    "Message": "$(L, zforms_confirm_save)",
+    "CompletionMessage": "$(L, zforms_confirm_save)",
+    "CompletionTimeout": 3,
+    "_Type": "Action.Type.ProgressBanner"
+}

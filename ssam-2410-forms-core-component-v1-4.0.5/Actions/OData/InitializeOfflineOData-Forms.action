@@ -1,0 +1,8 @@
+{
+	"Service": "/MirataFormsCoreComponents/Services/MirataAPI.service",
+	"DefiningRequests": [],
+	"_Type": "Action.Type.ODataService.Initialize",
+	"ActionResult": {
+		"_Name": "result"
+	}
+}

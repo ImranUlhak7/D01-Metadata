@@ -1,0 +1,25 @@
+[
+    {
+        "Position": "Right",
+        "_Name": "Mirata",
+        "Icon": "$(PLT,/MirataFormsCoreComponents/Images/mirata.png,/MirataFormsCoreComponents/Images/mirata.android.png)",
+        "OnPress": "/MirataFormsIntegrationComponents/Rules/Forms/Navigation/FormsToolbarIconPressEventHandler.js",
+        "Visible": "/MirataFormsIntegrationComponents/Rules/WorkOrders/Operations/EnableMirataToolbarIcon.js"
+    },
+    {
+        "Position": "Right",
+        "_Name": "Edit",
+        "SystemItem": "Edit",
+        "Caption": "$(L,edit)",
+        "Visible": "/SAPAssetManager/Rules/UserAuthorizations/WorkOrders/EnableWorkOrderEdit.js",
+        "OnPress": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationUpdateNav.js"
+    },
+    {
+        "Position": "Right",
+        "_Name": "Add",
+        "SystemItem": "Add",
+        "Caption": "$(L,add)",
+        "OnPress": "/SAPAssetManager/Actions/WorkOrders/Operations/WorkOrderOperationDetailsPopover.action",
+        "Visible": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationPopoverIsVisible.js"
+    }
+]

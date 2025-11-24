@@ -1,0 +1,31 @@
+{
+  "id": "your-organization-id.data-table-master.ssam-ux-work-order",
+  "organizationId": "your-organization-id",
+  "name": "SSAM UX Work Order",
+  "description": "Work order and/or operation data to evaluate when determining the UX Form to display",
+  "tableType": "simple",
+  "tableStorageType": "dynamo",
+  "valueFieldJSONSchema": {
+    "properties": {
+      "Order": {
+        "type": "integer",
+        "description": "Evaluation order (unique)",
+        "required": true
+      },
+      "Form": {
+        "type": "string",
+        "description": "ID of the SSAM UX Form to use",
+        "required": true
+      }
+    },
+    "required": [
+      "Order",
+      "Form"
+    ]
+  },
+  "dataTableQueryList": [],
+  "updatedBy": "",
+  "updatedAt": 0,
+  "status": true,
+  "downloadTableForOfflineUse": true
+}

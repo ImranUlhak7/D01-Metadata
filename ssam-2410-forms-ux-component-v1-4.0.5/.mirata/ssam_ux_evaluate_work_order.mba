@@ -1,0 +1,31 @@
+{
+  "id": "your-organization-id.integration-action.ssam-ux-evaluate-work-order",
+  "organizationId": "your-organization-id",
+  "actionDescriptorList": [],
+  "status": true,
+  "updatedBy": "",
+  "updatedAt": 0,
+  "name": "SSAM UX Evaluate Work Order",
+  "description": "Evaluates work order and/or operation properties to determine the UX form to display",
+  "parameterDescriptionList": [
+    {
+      "key": "work-order-id",
+      "valueFieldType": "string",
+      "valueRequired": true,
+      "description": "Work order number"
+    },
+    {
+      "key": "operation-id",
+      "valueFieldType": "string",
+      "valueRequired": false,
+      "description": "Operation number (if form is operation-centric)"
+    }
+  ],
+  "actionRequestType": "EmbeddedIntegrationEvent",
+  "actionRequest": {
+    "name": "",
+    "test": false,
+    "integration": "MDK",
+    "definition": "{}"
+  }
+}
