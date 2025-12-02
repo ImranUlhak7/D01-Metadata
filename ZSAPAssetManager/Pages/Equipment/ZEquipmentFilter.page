@@ -73,6 +73,13 @@
                 "Properties": {
                     "FilterProperty": "SuperiorEquip"
                     }
+            },
+            {
+                "_Type": "Fragment",
+                "Fragment":"/ZSAPAssetManager/Pages/Fragments/Filter/FunctionalLocation.fragment",
+                "Properties": {
+                    "FilterProperty": "FuncLocId"
+                    }
             }]
         }],
         "_Name":"FormCellContainer",

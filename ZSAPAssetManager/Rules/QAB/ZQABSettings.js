@@ -222,7 +222,7 @@ class QABSettingsHelpers {
                 'Label': this._context.localizeText('create_purchase_requisition'),
                 'Icon': '$(PLT,/SAPAssetManager/Images/QABAddPurchaseReq.png,/SAPAssetManager/Images/QABAddPurchaseReq.android.png)',
                 'IsButtonVisible': false,
-                'IsEnabled': isEnabled,
+                'IsEnabled': false,
                 'Action': '/SAPAssetManager/Rules/Inventory/PurchaseRequisition/AddPurchaseRequisitionNav.js',
                 '_Name': 'ADD_PURCHASE_REQUISITION',
             }, ...props,
