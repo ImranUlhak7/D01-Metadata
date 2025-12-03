@@ -26,6 +26,18 @@
 		{
 			"Source": "/ZSAPAssetManager/Rules/Equipment/ZEquipmentListFilterResults.js",
 			"Target": "/SAPAssetManager/Rules/Equipment/EquipmentListFilterResults.js"
+		},
+		{
+			"Source": "/ZSAPAssetManager/Rules/OverviewPage/ZOverviewQABSettings.js",
+			"Target": "/SAPAssetManager/Rules/OverviewPage/OverviewQABSettings.js"
+		},
+		{
+			"Source": "/ZSAPAssetManager/Rules/QAB/ZEquipmentFunctionalLocationQABSettings.js",
+			"Target": "/SAPAssetManager/Rules/QAB/EquipmentFunctionalLocationQABSettings.js"
+		},
+		{
+			"Source": "/ZSAPAssetManager/Rules/OnlineSearch/WorkOrders/ZAccessoryButtonIcon.js",
+			"Target": "/SAPAssetManager/Rules/OnlineSearch/WorkOrders/AccessoryButtonIcon.js"
 		}
 	]
 }

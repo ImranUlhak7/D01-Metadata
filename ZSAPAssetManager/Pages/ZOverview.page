@@ -233,7 +233,7 @@
 								"_Name": "SectionSimplePropertyCell3",
 								"KeyName": "$(L,notifications)",
 								"AccessoryType": "DisclosureIndicator",
-								"Visible": true,
+								"Visible": false,
 								"OnPress": "/SAPAssetManager/Rules/Notifications/NotificationsListViewNav.js"
 							}
 						},

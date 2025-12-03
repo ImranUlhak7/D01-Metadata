@@ -626,7 +626,7 @@
                   "SectionItemActive": "$(PLT,SectionItemActive,SideDrawerItemActive)",
                   "SectionItemOnPress": "$(PLT,SectionItemActive,SideDrawerItemActive)"
                 },
-              "Visible": "/SAPAssetManager/Rules/UserFeatures/IsPMNotificationEnabled.js"
+              "Visible": false
             },
             {
               "Title": "/SAPAssetManager/Rules/SideDrawer/SideDrawerEquipmentCount.js",
@@ -704,7 +704,7 @@
                   "SectionItemActive": "$(PLT,SectionItemActive,SideDrawerItemActive)",
                   "SectionItemOnPress": "$(PLT,SectionItemActive,SideDrawerItemActive)"
               },
-              "Visible": "/SAPAssetManager/Rules/Inventory/PurchaseRequisition/Technicians/IsPurchaseRequisitionVisible.js"
+              "Visible": false
             },
             {
               "Title": "$(L, vehicle_stock_lookup)",
