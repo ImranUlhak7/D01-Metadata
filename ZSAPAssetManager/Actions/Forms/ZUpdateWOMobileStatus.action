@@ -1,0 +1,22 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "Service": "/SAPAssetManager/Services/AssetManager.service",
+        "EntitySet": "PMMobileStatuses",
+        "ReadLink": "{ReadLink}"
+    },
+    "Properties": {
+        "MobileStatus": "{NewStatus}",
+        "CreateUserGUID": "{UserGUID}",
+        "CreateUserId": "{UserId}"
+    },
+    "UpdateLinks": [],
+    "Headers": {
+        "OfflineOData.TransactionID": "{WOReadLink}" 
+    },
+    "RequestOptions": {
+        "UploadCategory": "WorkOrderStatusUpload"
+    },
+    "ShowActivityIndicator": true,
+    "OnFailure": "/SAPAssetManager/Actions/Common/GenericErrorDialog.action"
+}

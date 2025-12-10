@@ -9951,6 +9951,111 @@
                 <Property Name="Notification" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Notification" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <NavigationProperty Name="MyNotificationHeader_Nav" Relationship="sap_mobile.MyNotifiHeader_WorkReqCnsqn" FromRole="ToRole_MyNotifiHeader_WorkReqCnsqn" ToRole="FromRole_MyNotifiHeader_WorkReqCnsqn"/>
             </EntityType>
+            <EntityType Name="ZMaterialTransferFormDetail" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="MaterialDocumentNumber"/>
+                </Key>
+                <Property Name="MaterialDocumentNumber" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="MTF Document Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangedAt" Type="Edm.Time" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Time of change" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Changed By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangedOnDate" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Changed On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreatedAtTime" Type="Edm.Time" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Created By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreatedOn" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Created On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="40" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EquipmentNumber" Type="Edm.String" Nullable="false" MaxLength="18" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Equipment" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FreeText" Type="Edm.String" Nullable="false" MaxLength="1" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Free Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LoadAssist" Type="Edm.String" Nullable="false" MaxLength="1" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Load Assist" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Client" Type="Edm.String" Nullable="false" MaxLength="3" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Client" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Manufacturer" Type="Edm.String" Nullable="false" MaxLength="30" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Manufacturer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ModelNumber" Type="Edm.String" Nullable="false" MaxLength="20" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Model number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SerialNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Manuf. SerialNr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Height" Type="Edm.String" MaxLength="13" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Height" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Length" Type="Edm.String" MaxLength="13" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Length" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LineNumber" Type="Edm.String" Nullable="false" MaxLength="4" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Line Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Quantity" Type="Edm.String" MaxLength="13" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UOM" Type="Edm.String" Nullable="false" MaxLength="3" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Base Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+                <Property Name="Weight" Type="Edm.String" MaxLength="13" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Weight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Width" Type="Edm.String" MaxLength="13" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Width" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZMaterialTransferFormHRDetail" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="EmployeeID"/>
+                </Key>
+                <Property Name="EmployeeID" Type="Edm.String" Nullable="false" MaxLength="20" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Employee Id" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangedAt" Type="Edm.Time" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Time of change" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Changed By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangedOn" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Changed On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreatedAt" Type="Edm.Time" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Created By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreatedOn" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Created On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DelegateTo" Type="Edm.String" Nullable="false" MaxLength="241" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Delegate To" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EmailID" Type="Edm.String" Nullable="false" MaxLength="241" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="E-Mail Address" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EmployeeActive" Type="Edm.String" Nullable="false" MaxLength="1" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Employee Active/Inactive Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EmployeeFirstName" Type="Edm.String" Nullable="false" MaxLength="40" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Employee First Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EmployeeLastDate" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Employee Last Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EmployeeLastName" Type="Edm.String" Nullable="false" MaxLength="40" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Employee Last Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="YardSupervisor" Type="Edm.String" Nullable="false" MaxLength="241" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="EYS" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Assigned SAP Plant/Location" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="JobTitle" Type="Edm.String" Nullable="false" MaxLength="50" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Job Title" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LastUpdateDate" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Last Updated Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Client" Type="Edm.String" Nullable="false" MaxLength="3" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Client" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="OnVacation" Type="Edm.String" Nullable="false" MaxLength="50" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="On Vacation" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RigNumber" Type="Edm.String" Nullable="false" MaxLength="4" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Rig Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SourceSystem" Type="Edm.String" Nullable="false" MaxLength="20" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Source System" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UserID" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="SSO User Id" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Supervisor" Type="Edm.String" Nullable="false" MaxLength="241" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Supervisor 1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacationEndDate" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Vacation End Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VacationStartDate" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Vacation Start Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="WorkFlowGroup" Type="Edm.String" Nullable="false" MaxLength="10" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Workflow Group" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="WorkFlowType" Type="Edm.String" Nullable="false" MaxLength="50" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Workflow Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZMaterialTransferFormHeader" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="MaterialDocumentNumber"/>
+                </Key>
+                <Property Name="FromRigName" Type="Edm.String" Nullable="false" MaxLength="40" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="From Rig / Location Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IssuerEmailID" Type="Edm.String" Nullable="false" MaxLength="241" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Issuer Email Id" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IssueDate" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Transfer Issue Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Client" Type="Edm.String" Nullable="false" MaxLength="3" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Client" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MaterialTransferStatus" Type="Edm.String" Nullable="false" MaxLength="40" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="MTF Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PickUpDate" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Pickup Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="POCPhoneNumber" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="POC Phone Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ReceivedDate" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Received Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ReceiverEmailID" Type="Edm.String" Nullable="false" MaxLength="241" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Receiver Email Id" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ReceiverName" Type="Edm.String" Nullable="false" MaxLength="50" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Receiver Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ShipCompanyName" Type="Edm.String" Nullable="false" MaxLength="50" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Ship.Company Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ToPlant" Type="Edm.String" Nullable="false" MaxLength="4" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="To Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ToPlantName" Type="Edm.String" Nullable="false" MaxLength="30" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="To Plant Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ToRig" Type="Edm.String" Nullable="false" MaxLength="50" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="To Rig/Location Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ToRigName" Type="Edm.String" Nullable="false" MaxLength="40" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="To Rig / Location Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TransferredFrom" Type="Edm.String" Nullable="false" MaxLength="20" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Transferred From" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TransferredFromName" Type="Edm.String" Nullable="false" MaxLength="40" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Transfered From Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TransferIssuerName" Type="Edm.String" Nullable="false" MaxLength="50" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Transfer Issue Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TransferReason" Type="Edm.String" Nullable="false" MaxLength="200" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Reason for Transfer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TransferTo" Type="Edm.String" Nullable="false" MaxLength="20" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Transferred To" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TransferToName" Type="Edm.String" Nullable="false" MaxLength="40" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Transfered To Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TruckNumber" Type="Edm.String" MaxLength="50" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Truck Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MaterialTransferAppURL" Type="Edm.String" Nullable="false" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="MTF APP URL" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MaterialDocumentNumber" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="MTF Document Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AuthorizerEmailID" Type="Edm.String" Nullable="false" MaxLength="241" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Authorizer Email Id" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AuthorizerName" Type="Edm.String" Nullable="false" MaxLength="50" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Authorizer Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AuthorizationDate" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Authorization Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangedAt" Type="Edm.Time" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Time of change" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Changed By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangedOn" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Changed On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreatedAt" Type="Edm.Time" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Created By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreatedOn" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Created On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DeliveryDate" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Delivery Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DestinationPOCName" Type="Edm.String" Nullable="false" MaxLength="50" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Destination POC Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DriverName" Type="Edm.String" Nullable="false" MaxLength="50" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Driver Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EmailID" Type="Edm.String" Nullable="false" MaxLength="241" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Email Id" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FromPlant" Type="Edm.String" Nullable="false" MaxLength="4" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="From Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FromPlantName" Type="Edm.String" Nullable="false" MaxLength="30" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="From Plant Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FromRig" Type="Edm.String" Nullable="false" MaxLength="50" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="From Rig/Location Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="ZMaterialTransferFormDetail_Nav" Relationship="sap_mobile.ZMTFHeader_MTFDetail" FromRole="FromRole_ZMTFHeader_MTFDetail" ToRole="ToRole_ZMTFHeader_MTFDetail"/>
+            </EntityType>
             <EntityType Name="ZWorkOrderInventoryCountDetail" sap:content-version="1">
                 <Key>
                     <PropertyRef Name="OrderID"/>
@@ -9958,7 +10063,7 @@
                     <PropertyRef Name="MaintenancePlan"/>
                 </Key>
                 <Property Name="OrderID" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Order" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="FoundByScan" Type="Edm.String" Nullable="false" MaxLength="1" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Found by Scan/Manual" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FoundByScan" Type="Edm.String" Nullable="false" MaxLength="1" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="ScanVerify/ManVerify" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="ChangedOn" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Changed On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="ChangedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Changed By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="ChangeTime" Type="Edm.Time" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Time of change" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
@@ -9972,7 +10077,7 @@
                 <Property Name="StorageLocation" Type="Edm.String" Nullable="false" MaxLength="4" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Location" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="L2Loc" Type="Edm.String" Nullable="false" MaxLength="30" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Level2 Function Loc" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="L3Loc" Type="Edm.String" Nullable="false" MaxLength="30" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Lev3 Functional Loc" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="InField" Type="Edm.String" Nullable="false" MaxLength="1" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Found In Field" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="InField" Type="Edm.String" Nullable="false" MaxLength="1" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Added In Field" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="NotFound" Type="Edm.String" Nullable="false" MaxLength="1" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Inventory Not Found" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="CompletionTimeStamp" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Completion TimeStamp" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="CompletedUser" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="User Completed" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
@@ -10010,6 +10115,7 @@
                 <Property Name="ChangedOn" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Changed On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="ChangeTime" Type="Edm.Time" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Time of change" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="ChangedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Changed By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="OrderDescription" Type="Edm.String" Nullable="false" MaxLength="40" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Order Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <NavigationProperty Name="ZWorkOrderInventoryCountDetail_Nav" Relationship="sap_mobile.ZWOInventoryHeader_WOInventoryDetail" FromRole="FromRole_ZWOInventoryHeader_WOInventoryDetail" ToRole="ToRole_ZWOInventoryHeader_WOInventoryDetail"/>
             </EntityType>
             <EntityType Name="MobileClientSynchronizationSession" sap:content-version="1">
@@ -10049,12 +10155,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_PlannerGroup_NotificationHistory">
-                        <PropertyRef Name="PlannerGroup"/>
                         <PropertyRef Name="PlanningPlant"/>
+                        <PropertyRef Name="PlannerGroup"/>
                     </Principal>
                     <Dependent Role="ToRole_PlannerGroup_NotificationHistory">
-                        <PropertyRef Name="PlannerGroup"/>
                         <PropertyRef Name="PlanningPlant"/>
+                        <PropertyRef Name="PlannerGroup"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -10085,13 +10191,13 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceItem_ConfirmItemHistory">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ItemNo"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceItem_ConfirmItemHistory">
-                        <PropertyRef Name="RelatedHeaderObjType"/>
                         <PropertyRef Name="RelatedObjectID"/>
+                        <PropertyRef Name="RelatedHeaderObjType"/>
                         <PropertyRef Name="RelatedItemNo"/>
                     </Dependent>
                 </ReferentialConstraint>
@@ -10105,14 +10211,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceItem_ContractItemHistory">
-                        <PropertyRef Name="ItemNo"/>
                         <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ItemNo"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceItem_ContractItemHistory">
-                        <PropertyRef Name="RelatedItemNo"/>
                         <PropertyRef Name="RelatedHeaderObjType"/>
                         <PropertyRef Name="RelatedObjectID"/>
+                        <PropertyRef Name="RelatedItemNo"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -10145,13 +10251,13 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceItem_ErrorMessage">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ItemNo"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceItem_ErrorMessage">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ItemNo"/>
                     </Dependent>
                 </ReferentialConstraint>
@@ -10166,13 +10272,13 @@
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceItem_FSMFormInstance">
                         <PropertyRef Name="ItemNo"/>
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceItem_FSMFormInstance">
                         <PropertyRef Name="S4ServiceItemNumber"/>
-                        <PropertyRef Name="S4ServiceOrderId"/>
                         <PropertyRef Name="S4ObjectType"/>
+                        <PropertyRef Name="S4ServiceOrderId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -10185,14 +10291,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceItem_LongText">
-                        <PropertyRef Name="ObjectType"/>
-                        <PropertyRef Name="ItemNo"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ItemNo"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceItem_LongText">
-                        <PropertyRef Name="ObjectType"/>
-                        <PropertyRef Name="ItemNo"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ItemNo"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -10245,14 +10351,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceItem_Partner">
-                        <PropertyRef Name="ObjectID"/>
-                        <PropertyRef Name="ItemNo"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ItemNo"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceItem_Partner">
-                        <PropertyRef Name="ObjectID"/>
-                        <PropertyRef Name="ItemNo"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ItemNo"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -10285,14 +10391,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceItem_TransHistory">
-                        <PropertyRef Name="ItemNo"/>
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ItemNo"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceItem_TransHistory">
-                        <PropertyRef Name="ItemNo"/>
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="HeaderObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ItemNo"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -10305,12 +10411,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_NextOverallStatus_OverallStatusSeq">
-                        <PropertyRef Name="Status"/>
                         <PropertyRef Name="EAMOverallStatusProfile"/>
+                        <PropertyRef Name="Status"/>
                     </Principal>
                     <Dependent Role="ToRole_NextOverallStatus_OverallStatusSeq">
-                        <PropertyRef Name="ToStatus"/>
                         <PropertyRef Name="ToEAMOverallStatusProfile"/>
+                        <PropertyRef Name="ToStatus"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -10393,12 +10499,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_BOMHeader_EquiBOM">
-                        <PropertyRef Name="BOMId"/>
                         <PropertyRef Name="BOMCategory"/>
+                        <PropertyRef Name="BOMId"/>
                     </Principal>
                     <Dependent Role="ToRole_BOMHeader_EquiBOM">
-                        <PropertyRef Name="BOMId"/>
                         <PropertyRef Name="BOMCategory"/>
+                        <PropertyRef Name="BOMId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -10411,12 +10517,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_BOMHeader_FLocBOM">
-                        <PropertyRef Name="BOMCategory"/>
                         <PropertyRef Name="BOMId"/>
+                        <PropertyRef Name="BOMCategory"/>
                     </Principal>
                     <Dependent Role="ToRole_BOMHeader_FLocBOM">
-                        <PropertyRef Name="BOMCategory"/>
                         <PropertyRef Name="BOMId"/>
+                        <PropertyRef Name="BOMCategory"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -10429,12 +10535,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_BOMHeader_MaterialBOM">
-                        <PropertyRef Name="BOMId"/>
                         <PropertyRef Name="BOMCategory"/>
+                        <PropertyRef Name="BOMId"/>
                     </Principal>
                     <Dependent Role="ToRole_BOMHeader_MaterialBOM">
-                        <PropertyRef Name="BOMId"/>
                         <PropertyRef Name="BOMCategory"/>
+                        <PropertyRef Name="BOMId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -10649,16 +10755,16 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MaterialBatchStock_MyWorkOrderComponent">
-                        <PropertyRef Name="MaterialNum"/>
                         <PropertyRef Name="Plant"/>
-                        <PropertyRef Name="StorageLocation"/>
+                        <PropertyRef Name="MaterialNum"/>
                         <PropertyRef Name="Batch"/>
+                        <PropertyRef Name="StorageLocation"/>
                     </Principal>
                     <Dependent Role="ToRole_MaterialBatchStock_MyWorkOrderComponent">
-                        <PropertyRef Name="MaterialNum"/>
                         <PropertyRef Name="Plant"/>
-                        <PropertyRef Name="StorageLocation"/>
+                        <PropertyRef Name="MaterialNum"/>
                         <PropertyRef Name="Batch"/>
+                        <PropertyRef Name="StorageLocation"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -12019,14 +12125,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CnsqncCategory_CnsqncSeverity">
-                        <PropertyRef Name="CategoryId"/>
-                        <PropertyRef Name="GroupId"/>
                         <PropertyRef Name="PrioritizationProfileId"/>
+                        <PropertyRef Name="GroupId"/>
+                        <PropertyRef Name="CategoryId"/>
                     </Principal>
                     <Dependent Role="ToRole_CnsqncCategory_CnsqncSeverity">
-                        <PropertyRef Name="CategoryId"/>
-                        <PropertyRef Name="GroupId"/>
                         <PropertyRef Name="PrioritizationProfileId"/>
+                        <PropertyRef Name="GroupId"/>
+                        <PropertyRef Name="CategoryId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -12057,12 +12163,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyNotifItem_LongText">
-                        <PropertyRef Name="NotificationNumber"/>
                         <PropertyRef Name="ItemNumber"/>
+                        <PropertyRef Name="NotificationNumber"/>
                     </Principal>
                     <Dependent Role="ToRole_MyNotifItem_LongText">
-                        <PropertyRef Name="NotificationNumber"/>
                         <PropertyRef Name="ItemNumber"/>
+                        <PropertyRef Name="NotificationNumber"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -12111,12 +12217,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyNotifItem_MyNotifItemTask">
-                        <PropertyRef Name="ItemNumber"/>
                         <PropertyRef Name="NotificationNumber"/>
+                        <PropertyRef Name="ItemNumber"/>
                     </Principal>
                     <Dependent Role="ToRole_MyNotifItem_MyNotifItemTask">
-                        <PropertyRef Name="ItemNumber"/>
                         <PropertyRef Name="NotificationNumber"/>
+                        <PropertyRef Name="ItemNumber"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -12147,12 +12253,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MaterialPlant_MaterialBatch">
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="MaterialNum"/>
+                        <PropertyRef Name="Plant"/>
                     </Principal>
                     <Dependent Role="ToRole_MaterialPlant_MaterialBatch">
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="MaterialNum"/>
+                        <PropertyRef Name="Plant"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -12165,12 +12271,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MaterialPlant_MaterialBatchStock">
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="MaterialNum"/>
+                        <PropertyRef Name="Plant"/>
                     </Principal>
                     <Dependent Role="ToRole_MaterialPlant_MaterialBatchStock">
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="MaterialNum"/>
+                        <PropertyRef Name="Plant"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -12237,12 +12343,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MaterialPlant_MaterialVendorConsignmentS">
-                        <PropertyRef Name="MaterialNum"/>
                         <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="MaterialNum"/>
                     </Principal>
                     <Dependent Role="ToRole_MaterialPlant_MaterialVendorConsignmentS">
-                        <PropertyRef Name="MaterialNum"/>
                         <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="MaterialNum"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -12255,12 +12361,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MaterialPlant_OuboundDeliveryItem">
-                        <PropertyRef Name="MaterialNum"/>
                         <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="MaterialNum"/>
                     </Principal>
                     <Dependent Role="ToRole_MaterialPlant_OuboundDeliveryItem">
-                        <PropertyRef Name="Material"/>
                         <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="Material"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -12273,12 +12379,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MaterialPlant_POItem">
-                        <PropertyRef Name="MaterialNum"/>
                         <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="MaterialNum"/>
                     </Principal>
                     <Dependent Role="ToRole_MaterialPlant_POItem">
-                        <PropertyRef Name="MaterialNum"/>
                         <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="MaterialNum"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -12291,12 +12397,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MaterialPlant_PhyInvItem">
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="MaterialNum"/>
+                        <PropertyRef Name="Plant"/>
                     </Principal>
                     <Dependent Role="ToRole_MaterialPlant_PhyInvItem">
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="Material"/>
+                        <PropertyRef Name="Plant"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -12309,12 +12415,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MaterialPlant_ProductionOrderComponent">
-                        <PropertyRef Name="MaterialNum"/>
                         <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="MaterialNum"/>
                     </Principal>
                     <Dependent Role="ToRole_MaterialPlant_ProductionOrderComponent">
-                        <PropertyRef Name="MaterialNum"/>
                         <PropertyRef Name="SupplyPlant"/>
+                        <PropertyRef Name="MaterialNum"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -12363,12 +12469,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MaterialPlant_STOItem">
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="MaterialNum"/>
+                        <PropertyRef Name="Plant"/>
                     </Principal>
                     <Dependent Role="ToRole_MaterialPlant_STOItem">
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="MaterialNum"/>
+                        <PropertyRef Name="Plant"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -12527,12 +12633,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_Priority_NotificationHeader">
-                        <PropertyRef Name="PriorityType"/>
                         <PropertyRef Name="Priority"/>
+                        <PropertyRef Name="PriorityType"/>
                     </Principal>
                     <Dependent Role="ToRole_Priority_NotificationHeader">
-                        <PropertyRef Name="PriorityType"/>
                         <PropertyRef Name="Priority"/>
+                        <PropertyRef Name="PriorityType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -12545,12 +12651,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_Priority_NotificationHistory">
-                        <PropertyRef Name="PriorityType"/>
                         <PropertyRef Name="Priority"/>
+                        <PropertyRef Name="PriorityType"/>
                     </Principal>
                     <Dependent Role="ToRole_Priority_NotificationHistory">
-                        <PropertyRef Name="PriorityType"/>
                         <PropertyRef Name="Priority"/>
+                        <PropertyRef Name="PriorityType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -12581,12 +12687,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_Priority_WorkOrderHistory">
-                        <PropertyRef Name="PriorityType"/>
                         <PropertyRef Name="Priority"/>
+                        <PropertyRef Name="PriorityType"/>
                     </Principal>
                     <Dependent Role="ToRole_Priority_WorkOrderHistory">
-                        <PropertyRef Name="PriorityType"/>
                         <PropertyRef Name="Priority"/>
+                        <PropertyRef Name="PriorityType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -12635,12 +12741,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyNotifTask_PMMobileStatus">
-                        <PropertyRef Name="TaskSequenceNumber"/>
                         <PropertyRef Name="NotificationNumber"/>
+                        <PropertyRef Name="TaskSequenceNumber"/>
                     </Principal>
                     <Dependent Role="ToRole_MyNotifTask_PMMobileStatus">
-                        <PropertyRef Name="TaskNum"/>
                         <PropertyRef Name="NotifNum"/>
+                        <PropertyRef Name="TaskNum"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -13497,12 +13603,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyWOOperation_Confirmation">
-                        <PropertyRef Name="OperationNo"/>
                         <PropertyRef Name="OrderId"/>
+                        <PropertyRef Name="OperationNo"/>
                     </Principal>
                     <Dependent Role="ToRole_MyWOOperation_Confirmation">
-                        <PropertyRef Name="Operation"/>
                         <PropertyRef Name="OrderID"/>
+                        <PropertyRef Name="Operation"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -13551,12 +13657,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyWOOperation_EAMChecklist">
-                        <PropertyRef Name="OperationNo"/>
                         <PropertyRef Name="OrderId"/>
+                        <PropertyRef Name="OperationNo"/>
                     </Principal>
                     <Dependent Role="ToRole_MyWOOperation_EAMChecklist">
-                        <PropertyRef Name="OperationNo"/>
                         <PropertyRef Name="OrderId"/>
+                        <PropertyRef Name="OperationNo"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -13623,12 +13729,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyWOOperation_MyWOComponent">
-                        <PropertyRef Name="OperationNo"/>
                         <PropertyRef Name="OrderId"/>
+                        <PropertyRef Name="OperationNo"/>
                     </Principal>
                     <Dependent Role="ToRole_MyWOOperation_MyWOComponent">
-                        <PropertyRef Name="OperationNo"/>
                         <PropertyRef Name="OrderId"/>
+                        <PropertyRef Name="OperationNo"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -13713,12 +13819,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyWOOperation_Stop">
-                        <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Principal>
                     <Dependent Role="ToRole_MyWOOperation_Stop">
-                        <PropertyRef Name="RouteID"/>
                         <PropertyRef Name="StopID"/>
+                        <PropertyRef Name="RouteID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -13767,12 +13873,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyWOOperation_WOObjectList">
-                        <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Principal>
                     <Dependent Role="ToRole_MyWOOperation_WOObjectList">
-                        <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -13989,12 +14095,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_LongText_S4ConfRefObjHistory">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_LongText_S4ConfRefObjHistory">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -14007,12 +14113,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_OutboundDeliveryItem_MatDocItem">
-                        <PropertyRef Name="Item"/>
                         <PropertyRef Name="DeliveryNum"/>
+                        <PropertyRef Name="Item"/>
                     </Principal>
                     <Dependent Role="ToRole_OutboundDeliveryItem_MatDocItem">
-                        <PropertyRef Name="DeliveryItem"/>
                         <PropertyRef Name="Delivery"/>
+                        <PropertyRef Name="DeliveryItem"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -15183,12 +15289,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_WCMApprovalProcessLongtext_WCMApprovalPr">
-                        <PropertyRef Name="ObjectNumber"/>
                         <PropertyRef Name="Counter"/>
+                        <PropertyRef Name="ObjectNumber"/>
                     </Principal>
                     <Dependent Role="ToRole_WCMApprovalProcessLongtext_WCMApprovalPr">
-                        <PropertyRef Name="ObjectNumber"/>
                         <PropertyRef Name="Counter"/>
+                        <PropertyRef Name="ObjectNumber"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -15283,16 +15389,16 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_ProductionOrderComponent_MaterialDocItem">
-                        <PropertyRef Name="OrderId"/>
-                        <PropertyRef Name="Reservation"/>
                         <PropertyRef Name="ItemNum"/>
+                        <PropertyRef Name="Reservation"/>
                         <PropertyRef Name="RecordType"/>
+                        <PropertyRef Name="OrderId"/>
                     </Principal>
                     <Dependent Role="ToRole_ProductionOrderComponent_MaterialDocItem">
-                        <PropertyRef Name="OrderNumber"/>
-                        <PropertyRef Name="ReservationNumber"/>
                         <PropertyRef Name="ReservationItemNumber"/>
+                        <PropertyRef Name="ReservationNumber"/>
                         <PropertyRef Name="ResvRecordType"/>
+                        <PropertyRef Name="OrderNumber"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -15353,12 +15459,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_POItem_MatDocItem">
-                        <PropertyRef Name="ItemNum"/>
                         <PropertyRef Name="PurchaseOrderId"/>
+                        <PropertyRef Name="ItemNum"/>
                     </Principal>
                     <Dependent Role="ToRole_POItem_MatDocItem">
-                        <PropertyRef Name="PurchaseOrderItem"/>
                         <PropertyRef Name="PurchaseOrderNumber"/>
+                        <PropertyRef Name="PurchaseOrderItem"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -15371,12 +15477,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_POItem_POSerialNumber">
-                        <PropertyRef Name="PurchaseOrderId"/>
                         <PropertyRef Name="ItemNum"/>
+                        <PropertyRef Name="PurchaseOrderId"/>
                     </Principal>
                     <Dependent Role="ToRole_POItem_POSerialNumber">
-                        <PropertyRef Name="PurchaseOrderId"/>
                         <PropertyRef Name="ItemNumber"/>
+                        <PropertyRef Name="PurchaseOrderId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -15443,12 +15549,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_WCMDocumentItem_WCMSystemStatus">
-                        <PropertyRef Name="WCMDocument"/>
                         <PropertyRef Name="WCMDocumentItem"/>
+                        <PropertyRef Name="WCMDocument"/>
                     </Principal>
                     <Dependent Role="ToRole_WCMDocumentItem_WCMSystemStatus">
-                        <PropertyRef Name="WCMDocument"/>
                         <PropertyRef Name="WCMDocumentItem"/>
+                        <PropertyRef Name="WCMDocument"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -15461,12 +15567,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_WCMDocumentItem_WCMUserStatus">
-                        <PropertyRef Name="WCMDocument"/>
                         <PropertyRef Name="WCMDocumentItem"/>
+                        <PropertyRef Name="WCMDocument"/>
                     </Principal>
                     <Dependent Role="ToRole_WCMDocumentItem_WCMUserStatus">
-                        <PropertyRef Name="WCMDocument"/>
                         <PropertyRef Name="WCMDocumentItem"/>
+                        <PropertyRef Name="WCMDocument"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -15479,18 +15585,18 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_EquipGeometry_Geometry">
-                        <PropertyRef Name="ObjectGroup1"/>
-                        <PropertyRef Name="ObjectType"/>
-                        <PropertyRef Name="SpacialId"/>
                         <PropertyRef Name="ObjectGroup"/>
                         <PropertyRef Name="SpacialGUId"/>
+                        <PropertyRef Name="SpacialId"/>
+                        <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectGroup1"/>
                     </Principal>
                     <Dependent Role="ToRole_EquipGeometry_Geometry">
-                        <PropertyRef Name="ObjectGroup1"/>
-                        <PropertyRef Name="ObjectType"/>
-                        <PropertyRef Name="SpacialId"/>
                         <PropertyRef Name="ObjectGroup"/>
                         <PropertyRef Name="SpacialGUId"/>
+                        <PropertyRef Name="SpacialId"/>
+                        <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectGroup1"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -15503,18 +15609,18 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_FuncLocGeometry_Geometry">
-                        <PropertyRef Name="ObjectType"/>
-                        <PropertyRef Name="ObjectGroup1"/>
-                        <PropertyRef Name="SpacialGUId"/>
-                        <PropertyRef Name="SpacialId"/>
                         <PropertyRef Name="ObjectGroup"/>
+                        <PropertyRef Name="SpacialId"/>
+                        <PropertyRef Name="SpacialGUId"/>
+                        <PropertyRef Name="ObjectGroup1"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_FuncLocGeometry_Geometry">
-                        <PropertyRef Name="ObjectType"/>
-                        <PropertyRef Name="ObjectGroup1"/>
-                        <PropertyRef Name="SpacialGUId"/>
-                        <PropertyRef Name="SpacialId"/>
                         <PropertyRef Name="ObjectGroup"/>
+                        <PropertyRef Name="SpacialId"/>
+                        <PropertyRef Name="SpacialGUId"/>
+                        <PropertyRef Name="ObjectGroup1"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -15527,15 +15633,15 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_Geometry_AddressGeocode">
-                        <PropertyRef Name="ObjectGroup"/>
                         <PropertyRef Name="ObjectGroup1"/>
+                        <PropertyRef Name="ObjectGroup"/>
                         <PropertyRef Name="SpacialGUId"/>
                         <PropertyRef Name="SpacialId"/>
                         <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_Geometry_AddressGeocode">
-                        <PropertyRef Name="ObjectGroup"/>
                         <PropertyRef Name="ObjectGroup1"/>
+                        <PropertyRef Name="ObjectGroup"/>
                         <PropertyRef Name="SpatialObjectGUID"/>
                         <PropertyRef Name="SpatialObjectId"/>
                         <PropertyRef Name="ObjectType"/>
@@ -15551,18 +15657,18 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_NotifGeometry_Geometry">
-                        <PropertyRef Name="ObjectGroup1"/>
-                        <PropertyRef Name="ObjectGroup"/>
                         <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="SpacialGUId"/>
                         <PropertyRef Name="SpacialId"/>
+                        <PropertyRef Name="ObjectGroup1"/>
+                        <PropertyRef Name="ObjectGroup"/>
                     </Principal>
                     <Dependent Role="ToRole_NotifGeometry_Geometry">
-                        <PropertyRef Name="ObjectGroup1"/>
-                        <PropertyRef Name="ObjectGroup"/>
                         <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="SpacialGUId"/>
                         <PropertyRef Name="SpacialId"/>
+                        <PropertyRef Name="ObjectGroup1"/>
+                        <PropertyRef Name="ObjectGroup"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -15576,17 +15682,17 @@
                 <ReferentialConstraint>
                     <Principal Role="FromRole_WOGeometry_Geometry">
                         <PropertyRef Name="SpacialId"/>
-                        <PropertyRef Name="ObjectType"/>
-                        <PropertyRef Name="SpacialGUId"/>
                         <PropertyRef Name="ObjectGroup"/>
                         <PropertyRef Name="ObjectGroup1"/>
+                        <PropertyRef Name="SpacialGUId"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_WOGeometry_Geometry">
                         <PropertyRef Name="SpacialId"/>
-                        <PropertyRef Name="ObjectType"/>
-                        <PropertyRef Name="SpacialGUId"/>
                         <PropertyRef Name="ObjectGroup"/>
                         <PropertyRef Name="ObjectGroup1"/>
+                        <PropertyRef Name="SpacialGUId"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -15647,12 +15753,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_SurveyDefinition_SurveyAnswer">
-                        <PropertyRef Name="SurveyVersion"/>
                         <PropertyRef Name="SurveyID"/>
+                        <PropertyRef Name="SurveyVersion"/>
                     </Principal>
                     <Dependent Role="ToRole_SurveyDefinition_SurveyAnswer">
-                        <PropertyRef Name="SurveyVersion"/>
                         <PropertyRef Name="SurveyID"/>
+                        <PropertyRef Name="SurveyVersion"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -15719,12 +15825,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_SurveyDefinition_SurveySection">
-                        <PropertyRef Name="SurveyID"/>
                         <PropertyRef Name="SurveyVersion"/>
+                        <PropertyRef Name="SurveyID"/>
                     </Principal>
                     <Dependent Role="ToRole_SurveyDefinition_SurveySection">
-                        <PropertyRef Name="SurveyID"/>
                         <PropertyRef Name="SurveyVersion"/>
+                        <PropertyRef Name="SurveyID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -16345,12 +16451,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_PhysicalInventoryDocHeader_Item">
-                        <PropertyRef Name="PhysInvDoc"/>
                         <PropertyRef Name="FiscalYear"/>
+                        <PropertyRef Name="PhysInvDoc"/>
                     </Principal>
                     <Dependent Role="ToRole_PhysicalInventoryDocHeader_Item">
-                        <PropertyRef Name="PhysInvDoc"/>
                         <PropertyRef Name="FiscalYear"/>
+                        <PropertyRef Name="PhysInvDoc"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -16363,12 +16469,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_PhysicalInventoryHdr_MyInventoryObject">
-                        <PropertyRef Name="PhysInvDoc"/>
                         <PropertyRef Name="FiscalYear"/>
+                        <PropertyRef Name="PhysInvDoc"/>
                     </Principal>
                     <Dependent Role="ToRole_PhysicalInventoryHdr_MyInventoryObject">
-                        <PropertyRef Name="ObjectId"/>
                         <PropertyRef Name="ObjectIdExtn"/>
+                        <PropertyRef Name="ObjectId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -16575,12 +16681,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_WCMCatalogLongtext_WCMCatalog">
-                        <PropertyRef Name="ObjectNumber"/>
                         <PropertyRef Name="Counter"/>
+                        <PropertyRef Name="ObjectNumber"/>
                     </Principal>
                     <Dependent Role="ToRole_WCMCatalogLongtext_WCMCatalog">
-                        <PropertyRef Name="ObjectNumber"/>
                         <PropertyRef Name="Counter"/>
+                        <PropertyRef Name="ObjectNumber"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -16754,19 +16860,19 @@
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyEquipClassCharValue_LAMCharValue">
                         <PropertyRef Name="ObjectKey"/>
+                        <PropertyRef Name="ObjClassFlag"/>
                         <PropertyRef Name="InternCounter"/>
                         <PropertyRef Name="ClassType"/>
-                        <PropertyRef Name="CharId"/>
                         <PropertyRef Name="CharValCounter"/>
-                        <PropertyRef Name="ObjClassFlag"/>
+                        <PropertyRef Name="CharId"/>
                     </Principal>
                     <Dependent Role="ToRole_MyEquipClassCharValue_LAMCharValue">
                         <PropertyRef Name="ObjectKey"/>
+                        <PropertyRef Name="ObjClassFlag"/>
                         <PropertyRef Name="InternCounter"/>
                         <PropertyRef Name="ClassType"/>
-                        <PropertyRef Name="InternCharacteristic"/>
                         <PropertyRef Name="CharValCounter"/>
-                        <PropertyRef Name="ObjClassFlag"/>
+                        <PropertyRef Name="InternCharacteristic"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -16863,12 +16969,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceRequest_Document">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceRequest_Document">
-                        <PropertyRef Name="HeaderID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="HeaderID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -16881,12 +16987,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceRequest_ErrorMessage">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceRequest_ErrorMessage">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="HeaderID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -16917,12 +17023,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceRequest_MobileStatus">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceRequest_MobileStatus">
-                        <PropertyRef Name="SortField"/>
                         <PropertyRef Name="S4ObjectTypeH"/>
+                        <PropertyRef Name="SortField"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -17007,12 +17113,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceRequest_S4QuotTransHistory">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceRequest_S4QuotTransHistory">
-                        <PropertyRef Name="RelatedObjectType"/>
                         <PropertyRef Name="RelatedObjectID"/>
+                        <PropertyRef Name="RelatedObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -17025,12 +17131,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceRequest_TransHistory">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceRequest_TransHistory">
-                        <PropertyRef Name="HeaderID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="HeaderID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -17075,12 +17181,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_VarianceReason_Confirmation">
-                        <PropertyRef Name="VarianceReason"/>
                         <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="VarianceReason"/>
                     </Principal>
                     <Dependent Role="ToRole_VarianceReason_Confirmation">
-                        <PropertyRef Name="VarianceReason"/>
                         <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="VarianceReason"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -17160,13 +17266,13 @@
                 <ReferentialConstraint>
                     <Principal Role="FromRole_ChecklistBusObject_Question">
                         <PropertyRef Name="TemplateId"/>
-                        <PropertyRef Name="AssessmentId"/>
                         <PropertyRef Name="ObjectId"/>
+                        <PropertyRef Name="AssessmentId"/>
                     </Principal>
                     <Dependent Role="ToRole_ChecklistBusObject_Question">
                         <PropertyRef Name="CLTemplateId"/>
-                        <PropertyRef Name="AssessmentId"/>
                         <PropertyRef Name="AINObjectId"/>
+                        <PropertyRef Name="AssessmentId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -17261,12 +17367,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceQuotation_ContractTransHistory">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceQuotation_ContractTransHistory">
-                        <PropertyRef Name="RelatedObjectID"/>
                         <PropertyRef Name="RelatedObjectType"/>
+                        <PropertyRef Name="RelatedObjectID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -17279,12 +17385,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceQuotation_ErrorMessage">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceQuotation_ErrorMessage">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="HeaderID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -17315,12 +17421,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceQuotation_MobileStatusHistory">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceQuotation_MobileStatusHistory">
-                        <PropertyRef Name="SortField"/>
                         <PropertyRef Name="S4ObjectTypeH"/>
+                        <PropertyRef Name="SortField"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -17333,12 +17439,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceQuotation_QuotDocument">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceQuotation_QuotDocument">
-                        <PropertyRef Name="HeaderID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="HeaderID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -17369,12 +17475,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceQuotation_QuotLongText">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceQuotation_QuotLongText">
-                        <PropertyRef Name="HeaderID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="HeaderID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -17387,12 +17493,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceQuotation_QuotPartner">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceQuotation_QuotPartner">
-                        <PropertyRef Name="HeaderID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="HeaderID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -17405,12 +17511,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceQuotation_QuotRefObject">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceQuotation_QuotRefObject">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="HeaderID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -17423,12 +17529,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceQuotation_QuotTransHistory">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceQuotation_QuotTransHistory">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="HeaderID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -17507,12 +17613,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4PartnerFunc_S4ConfirmationPartner">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="PartnerFunction"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4PartnerFunc_S4ConfirmationPartner">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="PartnerFunction"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -17525,12 +17631,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4PartnerFunc_S4OrderPartner">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="PartnerFunction"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4PartnerFunc_S4OrderPartner">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="PartnerFunction"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -17543,12 +17649,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4PartnerFunc_S4QuotPartnerFunc">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="PartnerFunction"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4PartnerFunc_S4QuotPartnerFunc">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="PartnerFunction"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -17583,6 +17689,22 @@
                     </Principal>
                     <Dependent Role="ToRole_EquipObjectType_MyEquipment">
                         <PropertyRef Name="EquipType"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ZMTFHeader_MTFDetail" sap:content-version="1">
+                <End Type="sap_mobile.ZMaterialTransferFormHeader" Multiplicity="1" Role="FromRole_ZMTFHeader_MTFDetail">
+                    <OnDelete Action="None"/>
+                </End>
+                <End Type="sap_mobile.ZMaterialTransferFormDetail" Multiplicity="*" Role="ToRole_ZMTFHeader_MTFDetail">
+                    <OnDelete Action="None"/>
+                </End>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ZMTFHeader_MTFDetail">
+                        <PropertyRef Name="MaterialDocumentNumber"/>
+                    </Principal>
+                    <Dependent Role="ToRole_ZMTFHeader_MTFDetail">
+                        <PropertyRef Name="MaterialDocumentNumber"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -18683,12 +18805,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_PurchaseRequisitionItem_AccAsgn">
-                        <PropertyRef Name="PurchaseReqItemNo"/>
                         <PropertyRef Name="PurchaseReqNo"/>
+                        <PropertyRef Name="PurchaseReqItemNo"/>
                     </Principal>
                     <Dependent Role="ToRole_PurchaseRequisitionItem_AccAsgn">
-                        <PropertyRef Name="PurchaseReqItemNo"/>
                         <PropertyRef Name="PurchaseReqNo"/>
+                        <PropertyRef Name="PurchaseReqItemNo"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -18979,12 +19101,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_ZWOInventoryHeader_WOInventoryDetail">
-                        <PropertyRef Name="MaintenancePlan"/>
                         <PropertyRef Name="OrderID"/>
+                        <PropertyRef Name="MaintenancePlan"/>
                     </Principal>
                     <Dependent Role="ToRole_ZWOInventoryHeader_WOInventoryDetail">
-                        <PropertyRef Name="MaintenancePlan"/>
                         <PropertyRef Name="OrderID"/>
+                        <PropertyRef Name="MaintenancePlan"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -18998,13 +19120,13 @@
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceQuotItem_ConfirmItemHistory">
                         <PropertyRef Name="ItemNo"/>
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceQuotItem_ConfirmItemHistory">
                         <PropertyRef Name="RelatedItemNo"/>
-                        <PropertyRef Name="RelatedObjectID"/>
                         <PropertyRef Name="RelatedHeaderObjType"/>
+                        <PropertyRef Name="RelatedObjectID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19017,13 +19139,13 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceQuotItem_ContractItemHistory">
-                        <PropertyRef Name="ItemNo"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ItemNo"/>
                         <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceQuotItem_ContractItemHistory">
-                        <PropertyRef Name="RelatedItemNo"/>
                         <PropertyRef Name="RelatedHeaderObjType"/>
+                        <PropertyRef Name="RelatedItemNo"/>
                         <PropertyRef Name="RelatedObjectID"/>
                     </Dependent>
                 </ReferentialConstraint>
@@ -19057,13 +19179,13 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceQuotItem_FSMFormInstance">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ItemNo"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceQuotItem_FSMFormInstance">
-                        <PropertyRef Name="S4ObjectType"/>
                         <PropertyRef Name="S4ServiceOrderId"/>
+                        <PropertyRef Name="S4ObjectType"/>
                         <PropertyRef Name="S4ServiceItemNumber"/>
                     </Dependent>
                 </ReferentialConstraint>
@@ -19077,13 +19199,13 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceQuotItem_MobileStatus">
-                        <PropertyRef Name="ItemNo"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ItemNo"/>
                         <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceQuotItem_MobileStatus">
-                        <PropertyRef Name="SortField"/>
                         <PropertyRef Name="S4ObjectID"/>
+                        <PropertyRef Name="SortField"/>
                         <PropertyRef Name="S4ObjectTypeH"/>
                     </Dependent>
                 </ReferentialConstraint>
@@ -19117,13 +19239,13 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceQuotItem_QuotDocument">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ItemNo"/>
+                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceQuotItem_QuotDocument">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ItemNo"/>
+                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
@@ -19138,13 +19260,13 @@
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceQuotItem_QuotLongText">
                         <PropertyRef Name="ObjectID"/>
-                        <PropertyRef Name="ItemNo"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ItemNo"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceQuotItem_QuotLongText">
                         <PropertyRef Name="ObjectID"/>
-                        <PropertyRef Name="ItemNo"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ItemNo"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19158,13 +19280,13 @@
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceQuotItem_QuotPartner">
                         <PropertyRef Name="ObjectType"/>
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ItemNo"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceQuotItem_QuotPartner">
                         <PropertyRef Name="ObjectType"/>
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ItemNo"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19198,13 +19320,13 @@
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceQuotItem_QuotTransHistory">
                         <PropertyRef Name="ObjectType"/>
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ItemNo"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceQuotItem_QuotTransHistory">
                         <PropertyRef Name="HeaderObjectType"/>
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ItemNo"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19217,14 +19339,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MasterInspChar_InspChar">
-                        <PropertyRef Name="MasterInspCharVersion"/>
-                        <PropertyRef Name="MasterInspCharPlant"/>
                         <PropertyRef Name="MasterInspChar"/>
+                        <PropertyRef Name="MasterInspCharPlant"/>
+                        <PropertyRef Name="MasterInspCharVersion"/>
                     </Principal>
                     <Dependent Role="ToRole_MasterInspChar_InspChar">
-                        <PropertyRef Name="MasterInspCharVersion"/>
-                        <PropertyRef Name="MasterInspCharPlant"/>
                         <PropertyRef Name="MasterInspChar"/>
+                        <PropertyRef Name="MasterInspCharPlant"/>
+                        <PropertyRef Name="MasterInspCharVersion"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19237,14 +19359,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MasterInspChar_InspHistory">
-                        <PropertyRef Name="MasterInspCharVersion"/>
                         <PropertyRef Name="MasterInspCharPlant"/>
                         <PropertyRef Name="MasterInspChar"/>
+                        <PropertyRef Name="MasterInspCharVersion"/>
                     </Principal>
                     <Dependent Role="ToRole_MasterInspChar_InspHistory">
-                        <PropertyRef Name="MasterInspVersion"/>
                         <PropertyRef Name="Plant"/>
                         <PropertyRef Name="MasterInspChar"/>
+                        <PropertyRef Name="MasterInspVersion"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19305,14 +19427,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_ValuationType_MaterialDocItem">
-                        <PropertyRef Name="ValuationArea"/>
-                        <PropertyRef Name="ValuationType"/>
                         <PropertyRef Name="ValuationCategory"/>
+                        <PropertyRef Name="ValuationType"/>
+                        <PropertyRef Name="ValuationArea"/>
                     </Principal>
                     <Dependent Role="ToRole_ValuationType_MaterialDocItem">
-                        <PropertyRef Name="Plant"/>
-                        <PropertyRef Name="ValuationType"/>
                         <PropertyRef Name="ValuationCategory"/>
+                        <PropertyRef Name="ValuationType"/>
+                        <PropertyRef Name="Plant"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19325,14 +19447,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_ValuationType_MaterialValuation">
-                        <PropertyRef Name="ValuationType"/>
-                        <PropertyRef Name="ValuationCategory"/>
                         <PropertyRef Name="ValuationArea"/>
+                        <PropertyRef Name="ValuationCategory"/>
+                        <PropertyRef Name="ValuationType"/>
                     </Principal>
                     <Dependent Role="ToRole_ValuationType_MaterialValuation">
-                        <PropertyRef Name="ValuationType"/>
-                        <PropertyRef Name="ValuationCategory"/>
                         <PropertyRef Name="ValuationArea"/>
+                        <PropertyRef Name="ValuationCategory"/>
+                        <PropertyRef Name="ValuationType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19345,13 +19467,13 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_ValuationType_PhysInvDocItem">
-                        <PropertyRef Name="ValuationArea"/>
                         <PropertyRef Name="ValuationCategory"/>
+                        <PropertyRef Name="ValuationArea"/>
                         <PropertyRef Name="ValuationType"/>
                     </Principal>
                     <Dependent Role="ToRole_ValuationType_PhysInvDocItem">
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="ValuationCategory"/>
+                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="ValuationType"/>
                     </Dependent>
                 </ReferentialConstraint>
@@ -19561,12 +19683,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyEAMWOOperation_DigitalSignLink">
-                        <PropertyRef Name="OperationNo"/>
                         <PropertyRef Name="OrderId"/>
+                        <PropertyRef Name="OperationNo"/>
                     </Principal>
                     <Dependent Role="ToRole_MyEAMWOOperation_DigitalSignLink">
-                        <PropertyRef Name="Operation"/>
                         <PropertyRef Name="Order"/>
+                        <PropertyRef Name="Operation"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19579,12 +19701,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyEAMWOOperation_Documents">
-                        <PropertyRef Name="OperationNo"/>
                         <PropertyRef Name="OrderId"/>
+                        <PropertyRef Name="OperationNo"/>
                     </Principal>
                     <Dependent Role="ToRole_MyEAMWOOperation_Documents">
-                        <PropertyRef Name="OperationNo"/>
                         <PropertyRef Name="OrderId"/>
+                        <PropertyRef Name="OperationNo"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19597,12 +19719,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyEAMWOOperation_LongText">
-                        <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Principal>
                     <Dependent Role="ToRole_MyEAMWOOperation_LongText">
-                        <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19651,12 +19773,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyEAMWOOperation_PMMobileStatus">
-                        <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Principal>
                     <Dependent Role="ToRole_MyEAMWOOperation_PMMobileStatus">
-                        <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19687,12 +19809,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyEAMWOOperation_RouteTechObj">
-                        <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Principal>
                     <Dependent Role="ToRole_MyEAMWOOperation_RouteTechObj">
-                        <PropertyRef Name="RouteID"/>
                         <PropertyRef Name="StopID"/>
+                        <PropertyRef Name="RouteID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19723,12 +19845,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyEAMWOOperation_UserTimeEntry">
-                        <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Principal>
                     <Dependent Role="ToRole_MyEAMWOOperation_UserTimeEntry">
-                        <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19741,12 +19863,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyEAMWOOperation_WOObjectList">
-                        <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Principal>
                     <Dependent Role="ToRole_MyEAMWOOperation_WOObjectList">
-                        <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19759,12 +19881,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyEAMWOOperation_WOTransfer">
-                        <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Principal>
                     <Dependent Role="ToRole_MyEAMWOOperation_WOTransfer">
-                        <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19829,12 +19951,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_ProductionOrderItem_MaterialDocItem">
-                        <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="ItemNum"/>
+                        <PropertyRef Name="OrderId"/>
                     </Principal>
                     <Dependent Role="ToRole_ProductionOrderItem_MaterialDocItem">
-                        <PropertyRef Name="OrderNumber"/>
                         <PropertyRef Name="OrderItemNumber"/>
+                        <PropertyRef Name="OrderNumber"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19847,12 +19969,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_ProductionOrderItem_Serial">
-                        <PropertyRef Name="ItemNum"/>
                         <PropertyRef Name="OrderId"/>
+                        <PropertyRef Name="ItemNum"/>
                     </Principal>
                     <Dependent Role="ToRole_ProductionOrderItem_Serial">
-                        <PropertyRef Name="ItemNo"/>
                         <PropertyRef Name="OrderID"/>
+                        <PropertyRef Name="ItemNo"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19945,12 +20067,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_InboundDeliveryItem_MatDocItem">
-                        <PropertyRef Name="DeliveryNum"/>
                         <PropertyRef Name="Item"/>
+                        <PropertyRef Name="DeliveryNum"/>
                     </Principal>
                     <Dependent Role="ToRole_InboundDeliveryItem_MatDocItem">
-                        <PropertyRef Name="Delivery"/>
                         <PropertyRef Name="DeliveryItem"/>
+                        <PropertyRef Name="Delivery"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -19963,12 +20085,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_InboundDeliveryItem_Serial">
-                        <PropertyRef Name="Item"/>
                         <PropertyRef Name="DeliveryNum"/>
+                        <PropertyRef Name="Item"/>
                     </Principal>
                     <Dependent Role="ToRole_InboundDeliveryItem_Serial">
-                        <PropertyRef Name="Item"/>
                         <PropertyRef Name="DeliveryNum"/>
+                        <PropertyRef Name="Item"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20064,13 +20186,13 @@
                 <ReferentialConstraint>
                     <Principal Role="FromRole_PMCatalogCode_WCMCatalog">
                         <PropertyRef Name="CodeGroup"/>
-                        <PropertyRef Name="Code"/>
                         <PropertyRef Name="Catalog"/>
+                        <PropertyRef Name="Code"/>
                     </Principal>
                     <Dependent Role="ToRole_PMCatalogCode_WCMCatalog">
                         <PropertyRef Name="CodeGroup"/>
-                        <PropertyRef Name="Code"/>
                         <PropertyRef Name="Catalog"/>
+                        <PropertyRef Name="Code"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20231,13 +20353,13 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceConfItem_MobileStatusHistory">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ItemNo"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceConfItem_MobileStatusHistory">
-                        <PropertyRef Name="S4ObjectTypeH"/>
                         <PropertyRef Name="S4ObjectID"/>
+                        <PropertyRef Name="S4ObjectTypeH"/>
                         <PropertyRef Name="SortField"/>
                     </Dependent>
                 </ReferentialConstraint>
@@ -20251,14 +20373,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceConfItem_OrderItemHistory">
-                        <PropertyRef Name="ItemNo"/>
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ItemNo"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceConfItem_OrderItemHistory">
-                        <PropertyRef Name="RelatedItemNo"/>
-                        <PropertyRef Name="RelatedObjectID"/>
                         <PropertyRef Name="RelatedHeaderObjType"/>
+                        <PropertyRef Name="RelatedObjectID"/>
+                        <PropertyRef Name="RelatedItemNo"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20271,14 +20393,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceConfItem_QuotItemHist">
-                        <PropertyRef Name="ItemNo"/>
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ItemNo"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceConfItem_QuotItemHist">
-                        <PropertyRef Name="RelatedItemNo"/>
-                        <PropertyRef Name="RelatedHeaderObjType"/>
                         <PropertyRef Name="RelatedObjectID"/>
+                        <PropertyRef Name="RelatedHeaderObjType"/>
+                        <PropertyRef Name="RelatedItemNo"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20291,14 +20413,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceConfirmationItem_Document">
-                        <PropertyRef Name="ObjectType"/>
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ItemNo"/>
+                        <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceConfirmationItem_Document">
-                        <PropertyRef Name="ObjectType"/>
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ItemNo"/>
+                        <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20331,14 +20453,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceConfirmationItem_MobileStatus">
-                        <PropertyRef Name="ItemNo"/>
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ItemNo"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceConfirmationItem_MobileStatus">
-                        <PropertyRef Name="SortField"/>
-                        <PropertyRef Name="S4ObjectID"/>
                         <PropertyRef Name="S4ObjectTypeH"/>
+                        <PropertyRef Name="S4ObjectID"/>
+                        <PropertyRef Name="SortField"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20351,14 +20473,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceConfirmationItem_Partner">
+                        <PropertyRef Name="ItemNo"/>
                         <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
-                        <PropertyRef Name="ItemNo"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceConfirmationItem_Partner">
+                        <PropertyRef Name="ItemNo"/>
                         <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
-                        <PropertyRef Name="ItemNo"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20371,14 +20493,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceConfirmationItem_RefOject">
-                        <PropertyRef Name="ItemNo"/>
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ItemNo"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceConfirmationItem_RefOject">
-                        <PropertyRef Name="ItemNo"/>
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ItemNo"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20391,13 +20513,13 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceConfirmationItem_TransHistory">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ItemNo"/>
+                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceConfirmationItem_TransHistory">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ItemNo"/>
+                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="HeaderObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
@@ -20427,13 +20549,13 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_GuidedFlowStatusConfig_GFFromStatSeq">
-                        <PropertyRef Name="MobileStatus"/>
                         <PropertyRef Name="EAMOverallStatusProfile"/>
+                        <PropertyRef Name="MobileStatus"/>
                         <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_GuidedFlowStatusConfig_GFFromStatSeq">
-                        <PropertyRef Name="FromStatus"/>
                         <PropertyRef Name="OverallStatusProfile"/>
+                        <PropertyRef Name="FromStatus"/>
                         <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
@@ -20447,14 +20569,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_GuidedFlowStatusConfig_GFToStatusSeq">
-                        <PropertyRef Name="EAMOverallStatusProfile"/>
-                        <PropertyRef Name="MobileStatus"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="MobileStatus"/>
+                        <PropertyRef Name="EAMOverallStatusProfile"/>
                     </Principal>
                     <Dependent Role="ToRole_GuidedFlowStatusConfig_GFToStatusSeq">
-                        <PropertyRef Name="OverallStatusProfile"/>
-                        <PropertyRef Name="ToStatus"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ToStatus"/>
+                        <PropertyRef Name="OverallStatusProfile"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20575,12 +20697,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceContract_S4ServiceContractItem">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceContract_S4ServiceContractItem">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20659,12 +20781,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_LongText_S4RequestRefObjHistory">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_LongText_S4RequestRefObjHistory">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20693,14 +20815,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyWOSubOperation_CatsTimesheet">
-                        <PropertyRef Name="OrderId"/>
-                        <PropertyRef Name="OperationNo"/>
                         <PropertyRef Name="SubOperationNo"/>
+                        <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Principal>
                     <Dependent Role="ToRole_MyWOSubOperation_CatsTimesheet">
-                        <PropertyRef Name="RecOrder"/>
-                        <PropertyRef Name="Operation"/>
                         <PropertyRef Name="SubOperation"/>
+                        <PropertyRef Name="Operation"/>
+                        <PropertyRef Name="RecOrder"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20714,13 +20836,13 @@
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyWOSubOperation_Confirmation">
                         <PropertyRef Name="OrderId"/>
-                        <PropertyRef Name="SubOperationNo"/>
                         <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="SubOperationNo"/>
                     </Principal>
                     <Dependent Role="ToRole_MyWOSubOperation_Confirmation">
                         <PropertyRef Name="OrderID"/>
-                        <PropertyRef Name="SubOperation"/>
                         <PropertyRef Name="Operation"/>
+                        <PropertyRef Name="SubOperation"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20733,14 +20855,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyWOSubOperation_LongText">
-                        <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="OperationNo"/>
                         <PropertyRef Name="SubOperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Principal>
                     <Dependent Role="ToRole_MyWOSubOperation_LongText">
-                        <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="OperationNo"/>
                         <PropertyRef Name="SubOperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20773,14 +20895,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyWOSubOperation_UserTimeEntry">
+                        <PropertyRef Name="OperationNo"/>
                         <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="SubOperationNo"/>
-                        <PropertyRef Name="OperationNo"/>
                     </Principal>
                     <Dependent Role="ToRole_MyWOSubOperation_UserTimeEntry">
+                        <PropertyRef Name="OperationNo"/>
                         <PropertyRef Name="OrderId"/>
                         <PropertyRef Name="SubOperationNo"/>
-                        <PropertyRef Name="OperationNo"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20793,14 +20915,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyWOSubOperation_WOObjectList">
-                        <PropertyRef Name="OrderId"/>
-                        <PropertyRef Name="OperationNo"/>
                         <PropertyRef Name="SubOperationNo"/>
+                        <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Principal>
                     <Dependent Role="ToRole_MyWOSubOperation_WOObjectList">
-                        <PropertyRef Name="OrderId"/>
-                        <PropertyRef Name="OperationNo"/>
                         <PropertyRef Name="SubOperationNo"/>
+                        <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20833,14 +20955,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyWorkOrderSubOperation_PMMobileStatusHi">
-                        <PropertyRef Name="OrderId"/>
-                        <PropertyRef Name="OperationNo"/>
                         <PropertyRef Name="SubOperationNo"/>
+                        <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Principal>
                     <Dependent Role="ToRole_MyWorkOrderSubOperation_PMMobileStatusHi">
-                        <PropertyRef Name="OrderId"/>
-                        <PropertyRef Name="OperationNo"/>
                         <PropertyRef Name="SubOperationNo"/>
+                        <PropertyRef Name="OperationNo"/>
+                        <PropertyRef Name="OrderId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20885,12 +21007,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceConfirm_OrderTransHistory">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceConfirm_OrderTransHistory">
-                        <PropertyRef Name="RelatedObjectType"/>
                         <PropertyRef Name="RelatedObjectID"/>
+                        <PropertyRef Name="RelatedObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20903,12 +21025,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceConfirm_QuotationTransHistory">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceConfirm_QuotationTransHistory">
-                        <PropertyRef Name="HeaderID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="HeaderID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20957,12 +21079,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceConfirmation_LongText">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceConfirmation_LongText">
-                        <PropertyRef Name="HeaderID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="HeaderID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -20993,12 +21115,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceConfirmation_MobileStatusHist">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceConfirmation_MobileStatusHist">
-                        <PropertyRef Name="SortField"/>
                         <PropertyRef Name="S4ObjectTypeH"/>
+                        <PropertyRef Name="SortField"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21011,12 +21133,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceConfirmation_Partner">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceConfirmation_Partner">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="HeaderID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21029,12 +21151,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceConfirmation_RefObject">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceConfirmation_RefObject">
-                        <PropertyRef Name="HeaderID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="HeaderID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21065,12 +21187,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceConfirmation_TransHistory">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceConfirmation_TransHistory">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="HeaderID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21393,12 +21515,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4ConfirmationCat1">
-                        <PropertyRef Name="SchemaGuid"/>
                         <PropertyRef Name="CategoryGuid"/>
+                        <PropertyRef Name="SchemaGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4ConfirmationCat1">
-                        <PropertyRef Name="SchemaGUID"/>
                         <PropertyRef Name="Category1"/>
+                        <PropertyRef Name="SchemaGUID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21429,12 +21551,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4ConfirmationCat3">
-                        <PropertyRef Name="CategoryGuid"/>
                         <PropertyRef Name="SchemaGuid"/>
+                        <PropertyRef Name="CategoryGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4ConfirmationCat3">
-                        <PropertyRef Name="Category3"/>
                         <PropertyRef Name="SchemaGUID"/>
+                        <PropertyRef Name="Category3"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21483,12 +21605,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4ConfirmationItemCat2">
-                        <PropertyRef Name="SchemaGuid"/>
                         <PropertyRef Name="CategoryGuid"/>
+                        <PropertyRef Name="SchemaGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4ConfirmationItemCat2">
-                        <PropertyRef Name="SchemaGUID"/>
                         <PropertyRef Name="Category2"/>
+                        <PropertyRef Name="SchemaGUID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21537,12 +21659,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4OrderCat1">
-                        <PropertyRef Name="SchemaGuid"/>
                         <PropertyRef Name="CategoryGuid"/>
+                        <PropertyRef Name="SchemaGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4OrderCat1">
-                        <PropertyRef Name="SchemaGUID"/>
                         <PropertyRef Name="Category1"/>
+                        <PropertyRef Name="SchemaGUID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21555,12 +21677,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4OrderCat2">
-                        <PropertyRef Name="SchemaGuid"/>
                         <PropertyRef Name="CategoryGuid"/>
+                        <PropertyRef Name="SchemaGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4OrderCat2">
-                        <PropertyRef Name="SchemaGUID"/>
                         <PropertyRef Name="Category2"/>
+                        <PropertyRef Name="SchemaGUID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21591,12 +21713,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4OrderCat4">
-                        <PropertyRef Name="CategoryGuid"/>
                         <PropertyRef Name="SchemaGuid"/>
+                        <PropertyRef Name="CategoryGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4OrderCat4">
-                        <PropertyRef Name="Category4"/>
                         <PropertyRef Name="SchemaGUID"/>
+                        <PropertyRef Name="Category4"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21609,12 +21731,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4QuotationCat1">
-                        <PropertyRef Name="SchemaGuid"/>
                         <PropertyRef Name="CategoryGuid"/>
+                        <PropertyRef Name="SchemaGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4QuotationCat1">
-                        <PropertyRef Name="SchemaGUID"/>
                         <PropertyRef Name="Category1"/>
+                        <PropertyRef Name="SchemaGUID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21699,12 +21821,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4QuotationItemCat2">
-                        <PropertyRef Name="SchemaGuid"/>
                         <PropertyRef Name="CategoryGuid"/>
+                        <PropertyRef Name="SchemaGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4QuotationItemCat2">
-                        <PropertyRef Name="SchemaGUID"/>
                         <PropertyRef Name="Category2"/>
+                        <PropertyRef Name="SchemaGUID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21717,12 +21839,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4QuotationItemCat3">
-                        <PropertyRef Name="CategoryGuid"/>
                         <PropertyRef Name="SchemaGuid"/>
+                        <PropertyRef Name="CategoryGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4QuotationItemCat3">
-                        <PropertyRef Name="Category3"/>
                         <PropertyRef Name="SchemaGUID"/>
+                        <PropertyRef Name="Category3"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21735,12 +21857,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4QuotationItemCat4">
-                        <PropertyRef Name="SchemaGuid"/>
                         <PropertyRef Name="CategoryGuid"/>
+                        <PropertyRef Name="SchemaGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4QuotationItemCat4">
-                        <PropertyRef Name="SchemaGUID"/>
                         <PropertyRef Name="Category4"/>
+                        <PropertyRef Name="SchemaGUID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21771,12 +21893,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4RequestCat1_2">
-                        <PropertyRef Name="CategoryGuid"/>
                         <PropertyRef Name="SchemaGuid"/>
+                        <PropertyRef Name="CategoryGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4RequestCat1_2">
-                        <PropertyRef Name="SubjCategory1"/>
                         <PropertyRef Name="SchemaGUID2"/>
+                        <PropertyRef Name="SubjCategory1"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21789,12 +21911,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4RequestCat2_1">
-                        <PropertyRef Name="CategoryGuid"/>
                         <PropertyRef Name="SchemaGuid"/>
+                        <PropertyRef Name="CategoryGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4RequestCat2_1">
-                        <PropertyRef Name="ReasonCategory2"/>
                         <PropertyRef Name="SchemaGUID1"/>
+                        <PropertyRef Name="ReasonCategory2"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21807,12 +21929,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4RequestCat2_2">
-                        <PropertyRef Name="CategoryGuid"/>
                         <PropertyRef Name="SchemaGuid"/>
+                        <PropertyRef Name="CategoryGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4RequestCat2_2">
-                        <PropertyRef Name="SubjCategory2"/>
                         <PropertyRef Name="SchemaGUID2"/>
+                        <PropertyRef Name="SubjCategory2"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21825,12 +21947,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4RequestCat3_1">
-                        <PropertyRef Name="SchemaGuid"/>
                         <PropertyRef Name="CategoryGuid"/>
+                        <PropertyRef Name="SchemaGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4RequestCat3_1">
-                        <PropertyRef Name="SchemaGUID1"/>
                         <PropertyRef Name="ReasonCategory3"/>
+                        <PropertyRef Name="SchemaGUID1"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21861,12 +21983,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4RequestCat4_1">
-                        <PropertyRef Name="SchemaGuid"/>
                         <PropertyRef Name="CategoryGuid"/>
+                        <PropertyRef Name="SchemaGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4RequestCat4_1">
-                        <PropertyRef Name="SchemaGUID1"/>
                         <PropertyRef Name="ReasonCategory4"/>
+                        <PropertyRef Name="SchemaGUID1"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21897,12 +22019,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4ServiceItemCat1">
-                        <PropertyRef Name="CategoryGuid"/>
                         <PropertyRef Name="SchemaGuid"/>
+                        <PropertyRef Name="CategoryGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4ServiceItemCat1">
-                        <PropertyRef Name="Category1"/>
                         <PropertyRef Name="SchemaGUID"/>
+                        <PropertyRef Name="Category1"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21915,12 +22037,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4ServiceItemCat2">
-                        <PropertyRef Name="CategoryGuid"/>
                         <PropertyRef Name="SchemaGuid"/>
+                        <PropertyRef Name="CategoryGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4ServiceItemCat2">
-                        <PropertyRef Name="Category2"/>
                         <PropertyRef Name="SchemaGUID"/>
+                        <PropertyRef Name="Category2"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21951,12 +22073,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_CatSchema_S4ServiceItemCat4">
-                        <PropertyRef Name="SchemaGuid"/>
                         <PropertyRef Name="CategoryGuid"/>
+                        <PropertyRef Name="SchemaGuid"/>
                     </Principal>
                     <Dependent Role="ToRole_CatSchema_S4ServiceItemCat4">
-                        <PropertyRef Name="SchemaGUID"/>
                         <PropertyRef Name="Category4"/>
+                        <PropertyRef Name="SchemaGUID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -21969,12 +22091,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_WorkCenterMain_MyEquipment">
-                        <PropertyRef Name="WorkCenterId"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="WorkCenterId"/>
                     </Principal>
                     <Dependent Role="ToRole_WorkCenterMain_MyEquipment">
-                        <PropertyRef Name="MaintWorkCenter"/>
                         <PropertyRef Name="PMObjectType"/>
+                        <PropertyRef Name="MaintWorkCenter"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22059,12 +22181,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_WorkCenter_WCMApplication">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="WorkCenterId"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_WorkCenter_WCMApplication">
-                        <PropertyRef Name="WorkCenterObjectType"/>
                         <PropertyRef Name="WorkCenterID"/>
+                        <PropertyRef Name="WorkCenterObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22095,12 +22217,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_WorkCenter_WCMDocumentHeader">
-                        <PropertyRef Name="WorkCenterId"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="WorkCenterId"/>
                     </Principal>
                     <Dependent Role="ToRole_WorkCenter_WCMDocumentHeader">
-                        <PropertyRef Name="WorkCenterID"/>
                         <PropertyRef Name="WorkCenterObjectType"/>
+                        <PropertyRef Name="WorkCenterID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22216,13 +22338,13 @@
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MaterialBatch_MaterialVendorConsignmentS">
                         <PropertyRef Name="Batch"/>
-                        <PropertyRef Name="MaterialNum"/>
                         <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="MaterialNum"/>
                     </Principal>
                     <Dependent Role="ToRole_MaterialBatch_MaterialVendorConsignmentS">
                         <PropertyRef Name="Batch"/>
-                        <PropertyRef Name="MaterialNum"/>
                         <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="MaterialNum"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22235,14 +22357,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MaterialBatch_MyEquipSerialNum">
-                        <PropertyRef Name="MaterialNum"/>
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="Batch"/>
+                        <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="MaterialNum"/>
                     </Principal>
                     <Dependent Role="ToRole_MaterialBatch_MyEquipSerialNum">
-                        <PropertyRef Name="MaterialNum"/>
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="BatchNumber"/>
+                        <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="MaterialNum"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22255,14 +22377,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MaterialBatch_MyWOComponent">
-                        <PropertyRef Name="Batch"/>
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="MaterialNum"/>
+                        <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="Batch"/>
                     </Principal>
                     <Dependent Role="ToRole_MaterialBatch_MyWOComponent">
-                        <PropertyRef Name="Batch"/>
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="MaterialNum"/>
+                        <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="Batch"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22275,16 +22397,16 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_InspectionChar_InspCharDependency">
-                        <PropertyRef Name="InspectionLot"/>
                         <PropertyRef Name="InspectionChar"/>
-                        <PropertyRef Name="SampleNum"/>
+                        <PropertyRef Name="InspectionLot"/>
                         <PropertyRef Name="InspectionNode"/>
+                        <PropertyRef Name="SampleNum"/>
                     </Principal>
                     <Dependent Role="ToRole_InspectionChar_InspCharDependency">
-                        <PropertyRef Name="InspectionLot"/>
                         <PropertyRef Name="InspectionChar"/>
-                        <PropertyRef Name="SampleNum"/>
+                        <PropertyRef Name="InspectionLot"/>
                         <PropertyRef Name="InspectionNode"/>
+                        <PropertyRef Name="SampleNum"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22319,14 +22441,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyNotifItemActivity_LongText">
+                        <PropertyRef Name="ActivitySequenceNumber"/>
                         <PropertyRef Name="NotificationNumber"/>
                         <PropertyRef Name="ItemNumber"/>
-                        <PropertyRef Name="ActivitySequenceNumber"/>
                     </Principal>
                     <Dependent Role="ToRole_MyNotifItemActivity_LongText">
+                        <PropertyRef Name="ActivitySequenceNumber"/>
                         <PropertyRef Name="NotificationNumber"/>
                         <PropertyRef Name="ItemNumber"/>
-                        <PropertyRef Name="ActivitySequenceNumber"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22339,14 +22461,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyNotifItemTask_LongText">
-                        <PropertyRef Name="NotificationNumber"/>
-                        <PropertyRef Name="TaskSequenceNumber"/>
                         <PropertyRef Name="ItemNumber"/>
+                        <PropertyRef Name="TaskSequenceNumber"/>
+                        <PropertyRef Name="NotificationNumber"/>
                     </Principal>
                     <Dependent Role="ToRole_MyNotifItemTask_LongText">
-                        <PropertyRef Name="NotificationNumber"/>
-                        <PropertyRef Name="TaskSequenceNumber"/>
                         <PropertyRef Name="ItemNumber"/>
+                        <PropertyRef Name="TaskSequenceNumber"/>
+                        <PropertyRef Name="NotificationNumber"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22359,14 +22481,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyNotifItemTask_PMMobileStatus">
-                        <PropertyRef Name="NotificationNumber"/>
-                        <PropertyRef Name="ItemNumber"/>
                         <PropertyRef Name="TaskSequenceNumber"/>
+                        <PropertyRef Name="ItemNumber"/>
+                        <PropertyRef Name="NotificationNumber"/>
                     </Principal>
                     <Dependent Role="ToRole_MyNotifItemTask_PMMobileStatus">
-                        <PropertyRef Name="NotifNum"/>
-                        <PropertyRef Name="ItemNum"/>
                         <PropertyRef Name="TaskNum"/>
+                        <PropertyRef Name="ItemNum"/>
+                        <PropertyRef Name="NotifNum"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22379,12 +22501,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_STOItem_MatDocItem">
-                        <PropertyRef Name="ItemNum"/>
                         <PropertyRef Name="StockTransportOrderId"/>
+                        <PropertyRef Name="ItemNum"/>
                     </Principal>
                     <Dependent Role="ToRole_STOItem_MatDocItem">
-                        <PropertyRef Name="PurchaseOrderItem"/>
                         <PropertyRef Name="PurchaseOrderNumber"/>
+                        <PropertyRef Name="PurchaseOrderItem"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22415,12 +22537,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_STOItem_ScheduleLine">
-                        <PropertyRef Name="ItemNum"/>
                         <PropertyRef Name="StockTransportOrderId"/>
+                        <PropertyRef Name="ItemNum"/>
                     </Principal>
                     <Dependent Role="ToRole_STOItem_ScheduleLine">
-                        <PropertyRef Name="ItemNum"/>
                         <PropertyRef Name="StockTransportOrderId"/>
+                        <PropertyRef Name="ItemNum"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22577,16 +22699,16 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_PhaseControl_PhaseControlSystemStatus">
-                        <PropertyRef Name="PhaseControlKey"/>
                         <PropertyRef Name="Entity"/>
                         <PropertyRef Name="OrderType"/>
                         <PropertyRef Name="PhaseControl"/>
+                        <PropertyRef Name="PhaseControlKey"/>
                     </Principal>
                     <Dependent Role="ToRole_PhaseControl_PhaseControlSystemStatus">
-                        <PropertyRef Name="PhaseControlKey"/>
                         <PropertyRef Name="Entity"/>
                         <PropertyRef Name="OrderType"/>
                         <PropertyRef Name="PhaseControl"/>
+                        <PropertyRef Name="PhaseControlKey"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22672,13 +22794,13 @@
                 <ReferentialConstraint>
                     <Principal Role="FromRole_InspMethod_InspMethodLongText">
                         <PropertyRef Name="Version"/>
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="Method"/>
+                        <PropertyRef Name="Plant"/>
                     </Principal>
                     <Dependent Role="ToRole_InspMethod_InspMethodLongText">
                         <PropertyRef Name="Version"/>
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="Method"/>
+                        <PropertyRef Name="Plant"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22691,20 +22813,20 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MyFLocClassCharValue_LAMCharValue">
-                        <PropertyRef Name="ClassType"/>
-                        <PropertyRef Name="CharId"/>
                         <PropertyRef Name="InternCounter"/>
+                        <PropertyRef Name="CharId"/>
+                        <PropertyRef Name="ClassType"/>
+                        <PropertyRef Name="ObjectKey"/>
                         <PropertyRef Name="ObjClassFlag"/>
                         <PropertyRef Name="CharValCounter"/>
-                        <PropertyRef Name="ObjectKey"/>
                     </Principal>
                     <Dependent Role="ToRole_MyFLocClassCharValue_LAMCharValue">
-                        <PropertyRef Name="ClassType"/>
-                        <PropertyRef Name="InternCharacteristic"/>
                         <PropertyRef Name="InternCounter"/>
+                        <PropertyRef Name="InternCharacteristic"/>
+                        <PropertyRef Name="ClassType"/>
+                        <PropertyRef Name="ObjectKey"/>
                         <PropertyRef Name="ObjClassFlag"/>
                         <PropertyRef Name="CharValCounter"/>
-                        <PropertyRef Name="ObjectKey"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22717,12 +22839,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceOrder_ConfTransHistory">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceOrder_ConfTransHistory">
-                        <PropertyRef Name="RelatedObjectType"/>
                         <PropertyRef Name="RelatedObjectID"/>
+                        <PropertyRef Name="RelatedObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22735,12 +22857,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceOrder_ContractTransHistory">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceOrder_ContractTransHistory">
-                        <PropertyRef Name="RelatedObjectID"/>
                         <PropertyRef Name="RelatedObjectType"/>
+                        <PropertyRef Name="RelatedObjectID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22753,12 +22875,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceOrder_Document">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceOrder_Document">
-                        <PropertyRef Name="HeaderID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="HeaderID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22771,12 +22893,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceOrder_ErrorMessage">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceOrder_ErrorMessage">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="HeaderID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22807,12 +22929,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceOrder_MobileStatus">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceOrder_MobileStatus">
-                        <PropertyRef Name="SortField"/>
                         <PropertyRef Name="S4ObjectTypeH"/>
+                        <PropertyRef Name="SortField"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22843,12 +22965,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceOrder_Partner">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceOrder_Partner">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="HeaderID"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22861,12 +22983,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceOrder_RefObject">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceOrder_RefObject">
-                        <PropertyRef Name="HeaderID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="HeaderID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22879,12 +23001,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceOrder_RequestTransHistory">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceOrder_RequestTransHistory">
-                        <PropertyRef Name="RelatedObjectID"/>
                         <PropertyRef Name="RelatedObjectType"/>
+                        <PropertyRef Name="RelatedObjectID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22897,12 +23019,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceOrder_S4ServiceItem">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceOrder_S4ServiceItem">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22934,17 +23056,17 @@
                 <ReferentialConstraint>
                     <Principal Role="FromRole_InspCode_InspCharacterstic">
                         <PropertyRef Name="SelectedSet"/>
-                        <PropertyRef Name="Plant"/>
-                        <PropertyRef Name="Code"/>
-                        <PropertyRef Name="CodeGroup"/>
                         <PropertyRef Name="Catalog"/>
+                        <PropertyRef Name="CodeGroup"/>
+                        <PropertyRef Name="Code"/>
+                        <PropertyRef Name="Plant"/>
                     </Principal>
                     <Dependent Role="ToRole_InspCode_InspCharacterstic">
                         <PropertyRef Name="SelectedSet"/>
-                        <PropertyRef Name="SelectedSetPlant"/>
-                        <PropertyRef Name="Code"/>
-                        <PropertyRef Name="CodeGroup"/>
                         <PropertyRef Name="Catalog"/>
+                        <PropertyRef Name="CodeGroup"/>
+                        <PropertyRef Name="Code"/>
+                        <PropertyRef Name="SelectedSetPlant"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22959,16 +23081,16 @@
                     <Principal Role="FromRole_InspCode_InspHistory">
                         <PropertyRef Name="Plant"/>
                         <PropertyRef Name="CodeGroup"/>
+                        <PropertyRef Name="Catalog"/>
                         <PropertyRef Name="SelectedSet"/>
                         <PropertyRef Name="Code"/>
-                        <PropertyRef Name="Catalog"/>
                     </Principal>
                     <Dependent Role="ToRole_InspCode_InspHistory">
                         <PropertyRef Name="DefectPlant"/>
                         <PropertyRef Name="DefectCodeGroup"/>
+                        <PropertyRef Name="DefectCatalog"/>
                         <PropertyRef Name="DefectSelectedSet"/>
                         <PropertyRef Name="DefectCode"/>
-                        <PropertyRef Name="DefectCatalog"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -22981,18 +23103,18 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_InspCode_InspPoint">
-                        <PropertyRef Name="Code"/>
-                        <PropertyRef Name="Catalog"/>
                         <PropertyRef Name="SelectedSet"/>
+                        <PropertyRef Name="Code"/>
                         <PropertyRef Name="Plant"/>
                         <PropertyRef Name="CodeGroup"/>
+                        <PropertyRef Name="Catalog"/>
                     </Principal>
                     <Dependent Role="ToRole_InspCode_InspPoint">
-                        <PropertyRef Name="ValCode"/>
-                        <PropertyRef Name="ValCatalog"/>
                         <PropertyRef Name="ValSelectedSet"/>
+                        <PropertyRef Name="ValCode"/>
                         <PropertyRef Name="Plant"/>
                         <PropertyRef Name="ValCodeGroup"/>
+                        <PropertyRef Name="ValCatalog"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -23029,14 +23151,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_InspectionPoint_InspectionChar">
-                        <PropertyRef Name="InspectionLot"/>
-                        <PropertyRef Name="SampleNum"/>
                         <PropertyRef Name="InspectionNode"/>
+                        <PropertyRef Name="SampleNum"/>
+                        <PropertyRef Name="InspectionLot"/>
                     </Principal>
                     <Dependent Role="ToRole_InspectionPoint_InspectionChar">
-                        <PropertyRef Name="InspectionLot"/>
-                        <PropertyRef Name="SampleNum"/>
                         <PropertyRef Name="InspectionNode"/>
+                        <PropertyRef Name="SampleNum"/>
+                        <PropertyRef Name="InspectionLot"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -23050,13 +23172,13 @@
                 <ReferentialConstraint>
                     <Principal Role="FromRole_InspectionPoint_NotifItem">
                         <PropertyRef Name="InspectionLot"/>
-                        <PropertyRef Name="SampleNum"/>
                         <PropertyRef Name="InspectionNode"/>
+                        <PropertyRef Name="SampleNum"/>
                     </Principal>
                     <Dependent Role="ToRole_InspectionPoint_NotifItem">
                         <PropertyRef Name="InspectionLot"/>
-                        <PropertyRef Name="InspectionSample"/>
                         <PropertyRef Name="InspectionNode"/>
+                        <PropertyRef Name="InspectionSample"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -23133,12 +23255,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_WCMApplicationUsage_WCMApplication">
-                        <PropertyRef Name="Usage"/>
                         <PropertyRef Name="PlanningPlant"/>
+                        <PropertyRef Name="Usage"/>
                     </Principal>
                     <Dependent Role="ToRole_WCMApplicationUsage_WCMApplication">
-                        <PropertyRef Name="Usage"/>
                         <PropertyRef Name="PlanningPlant"/>
+                        <PropertyRef Name="Usage"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -23151,12 +23273,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MatDoc_MatDocAttachment">
-                        <PropertyRef Name="MaterialDocYear"/>
                         <PropertyRef Name="MaterialDocNumber"/>
+                        <PropertyRef Name="MaterialDocYear"/>
                     </Principal>
                     <Dependent Role="ToRole_MatDoc_MatDocAttachment">
-                        <PropertyRef Name="MatDocYear"/>
                         <PropertyRef Name="MaterialDoc"/>
+                        <PropertyRef Name="MatDocYear"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -23253,12 +23375,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_AddressAtWork_AddressAtWorkComm">
-                        <PropertyRef Name="AddressNum"/>
                         <PropertyRef Name="PersonNum"/>
+                        <PropertyRef Name="AddressNum"/>
                     </Principal>
                     <Dependent Role="ToRole_AddressAtWork_AddressAtWorkComm">
-                        <PropertyRef Name="AddressNum"/>
                         <PropertyRef Name="PersonNum"/>
+                        <PropertyRef Name="AddressNum"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -23271,12 +23393,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_AddressAtWork_BusinessPartner">
-                        <PropertyRef Name="AddressNum"/>
                         <PropertyRef Name="PersonNum"/>
+                        <PropertyRef Name="AddressNum"/>
                     </Principal>
                     <Dependent Role="ToRole_AddressAtWork_BusinessPartner">
-                        <PropertyRef Name="AddressNum"/>
                         <PropertyRef Name="PersonNum"/>
+                        <PropertyRef Name="AddressNum"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -23289,12 +23411,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_AddressAtWork_EquipPartner">
-                        <PropertyRef Name="PersonNum"/>
                         <PropertyRef Name="AddressNum"/>
+                        <PropertyRef Name="PersonNum"/>
                     </Principal>
                     <Dependent Role="ToRole_AddressAtWork_EquipPartner">
-                        <PropertyRef Name="PersonNum"/>
                         <PropertyRef Name="AddressNum"/>
+                        <PropertyRef Name="PersonNum"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -23343,12 +23465,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_AddressAtWork_S4BusinessPartner">
-                        <PropertyRef Name="PersonNum"/>
                         <PropertyRef Name="AddressNum"/>
+                        <PropertyRef Name="PersonNum"/>
                     </Principal>
                     <Dependent Role="ToRole_AddressAtWork_S4BusinessPartner">
-                        <PropertyRef Name="PersonNum"/>
                         <PropertyRef Name="AddressNum"/>
+                        <PropertyRef Name="PersonNum"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -23397,12 +23519,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_AddressAtWork_WCMApprovalPartner">
-                        <PropertyRef Name="AddressNum"/>
                         <PropertyRef Name="PersonNum"/>
+                        <PropertyRef Name="AddressNum"/>
                     </Principal>
                     <Dependent Role="ToRole_AddressAtWork_WCMApprovalPartner">
-                        <PropertyRef Name="AddressNumber"/>
                         <PropertyRef Name="PersonNum"/>
+                        <PropertyRef Name="AddressNumber"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -23471,14 +23593,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MatDocItem_WOCompMatDoc">
+                        <PropertyRef Name="MaterialDocNumber"/>
                         <PropertyRef Name="MaterialDocYear"/>
                         <PropertyRef Name="MatDocItem"/>
-                        <PropertyRef Name="MaterialDocNumber"/>
                     </Principal>
                     <Dependent Role="ToRole_MatDocItem_WOCompMatDoc">
+                        <PropertyRef Name="MaterialDocNumber"/>
                         <PropertyRef Name="MaterialDocYear"/>
                         <PropertyRef Name="MatDocItem"/>
-                        <PropertyRef Name="MaterialDocNumber"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -23603,12 +23725,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_UserStatus_MyEquipUserStatus">
-                        <PropertyRef Name="StatusProfile"/>
                         <PropertyRef Name="UserStatus"/>
+                        <PropertyRef Name="StatusProfile"/>
                     </Principal>
                     <Dependent Role="ToRole_UserStatus_MyEquipUserStatus">
-                        <PropertyRef Name="StatusProfile"/>
                         <PropertyRef Name="Status"/>
+                        <PropertyRef Name="StatusProfile"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -23621,12 +23743,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_UserStatus_MyFuncLocUserStatus">
-                        <PropertyRef Name="StatusProfile"/>
                         <PropertyRef Name="UserStatus"/>
+                        <PropertyRef Name="StatusProfile"/>
                     </Principal>
                     <Dependent Role="ToRole_UserStatus_MyFuncLocUserStatus">
-                        <PropertyRef Name="StatusProfile"/>
                         <PropertyRef Name="Status"/>
+                        <PropertyRef Name="StatusProfile"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -23741,12 +23863,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_StorageLocation_UserTrunkAssignment">
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="StorageLocation"/>
+                        <PropertyRef Name="Plant"/>
                     </Principal>
                     <Dependent Role="ToRole_StorageLocation_UserTrunkAssignment">
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="StorageLocation"/>
+                        <PropertyRef Name="Plant"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -23759,14 +23881,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MaterialSLoc_MaterialProjectStock">
-                        <PropertyRef Name="Plant"/>
-                        <PropertyRef Name="MaterialNum"/>
                         <PropertyRef Name="StorageLocation"/>
+                        <PropertyRef Name="MaterialNum"/>
+                        <PropertyRef Name="Plant"/>
                     </Principal>
                     <Dependent Role="ToRole_MaterialSLoc_MaterialProjectStock">
-                        <PropertyRef Name="Plant"/>
-                        <PropertyRef Name="MaterialNum"/>
                         <PropertyRef Name="StorageLocation"/>
+                        <PropertyRef Name="MaterialNum"/>
+                        <PropertyRef Name="Plant"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -23779,14 +23901,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MaterialSLoc_MaterialVendorConsignmentSt">
-                        <PropertyRef Name="MaterialNum"/>
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="StorageLocation"/>
+                        <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="MaterialNum"/>
                     </Principal>
                     <Dependent Role="ToRole_MaterialSLoc_MaterialVendorConsignmentSt">
-                        <PropertyRef Name="MaterialNum"/>
-                        <PropertyRef Name="Plant"/>
                         <PropertyRef Name="StorageLocation"/>
+                        <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="MaterialNum"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -23799,13 +23921,13 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_MaterialSLoc_PhysicalInventoryDocItem">
-                        <PropertyRef Name="MaterialNum"/>
                         <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="MaterialNum"/>
                         <PropertyRef Name="StorageLocation"/>
                     </Principal>
                     <Dependent Role="ToRole_MaterialSLoc_PhysicalInventoryDocItem">
-                        <PropertyRef Name="Material"/>
                         <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="Material"/>
                         <PropertyRef Name="StorLocation"/>
                     </Dependent>
                 </ReferentialConstraint>
@@ -24797,12 +24919,12 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_DigitalSigObject_DigitalSigHeader">
-                        <PropertyRef Name="Application"/>
                         <PropertyRef Name="Object"/>
+                        <PropertyRef Name="Application"/>
                     </Principal>
                     <Dependent Role="ToRole_DigitalSigObject_DigitalSigHeader">
-                        <PropertyRef Name="Application"/>
                         <PropertyRef Name="Object"/>
+                        <PropertyRef Name="Application"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -24851,13 +24973,13 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ContractItem_ConfirmItemHistory">
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ItemNo"/>
+                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ContractItem_ConfirmItemHistory">
-                        <PropertyRef Name="RelatedObjectID"/>
                         <PropertyRef Name="RelatedItemNo"/>
+                        <PropertyRef Name="RelatedObjectID"/>
                         <PropertyRef Name="RelatedHeaderObjType"/>
                     </Dependent>
                 </ReferentialConstraint>
@@ -24871,14 +24993,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ContractItem_OrderItemHistory">
-                        <PropertyRef Name="ItemNo"/>
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ItemNo"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ContractItem_OrderItemHistory">
-                        <PropertyRef Name="RelatedItemNo"/>
-                        <PropertyRef Name="RelatedObjectID"/>
                         <PropertyRef Name="RelatedHeaderObjType"/>
+                        <PropertyRef Name="RelatedObjectID"/>
+                        <PropertyRef Name="RelatedItemNo"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -24931,14 +25053,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceContractItem_LongText">
-                        <PropertyRef Name="ObjectType"/>
-                        <PropertyRef Name="ItemNo"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ItemNo"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceContractItem_LongText">
-                        <PropertyRef Name="ObjectType"/>
-                        <PropertyRef Name="ItemNo"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ItemNo"/>
+                        <PropertyRef Name="ObjectType"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -24951,13 +25073,13 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceContractItem_RefObject">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ItemNo"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceContractItem_RefObject">
-                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ObjectType"/>
                         <PropertyRef Name="ItemNo"/>
                     </Dependent>
                 </ReferentialConstraint>
@@ -24971,14 +25093,14 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_S4ServiceContractItem_TransHistory">
-                        <PropertyRef Name="ItemNo"/>
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="ObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ItemNo"/>
                     </Principal>
                     <Dependent Role="ToRole_S4ServiceContractItem_TransHistory">
-                        <PropertyRef Name="ItemNo"/>
-                        <PropertyRef Name="ObjectID"/>
                         <PropertyRef Name="HeaderObjectType"/>
+                        <PropertyRef Name="ObjectID"/>
+                        <PropertyRef Name="ItemNo"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -25473,13 +25595,13 @@
                 </End>
                 <ReferentialConstraint>
                     <Principal Role="FromRole_PhysicalInventoryDocItem_Serial">
-                        <PropertyRef Name="FiscalYear"/>
                         <PropertyRef Name="Item"/>
+                        <PropertyRef Name="FiscalYear"/>
                         <PropertyRef Name="PhysInvDoc"/>
                     </Principal>
                     <Dependent Role="ToRole_PhysicalInventoryDocItem_Serial">
-                        <PropertyRef Name="FiscalYear"/>
                         <PropertyRef Name="Item"/>
+                        <PropertyRef Name="FiscalYear"/>
                         <PropertyRef Name="PhysInvDoc"/>
                     </Dependent>
                 </ReferentialConstraint>
@@ -25941,6 +26063,9 @@
                 <EntitySet Name="WorkOrderPhaseControls" EntityType="sap_mobile.WorkOrderPhaseControl" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="WorkOrderTransfers" EntityType="sap_mobile.WorkOrderTransfer" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="WorkRequestConsequences" EntityType="sap_mobile.WorkRequestConsequence" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ZMaterialTransferFormDetails" EntityType="sap_mobile.ZMaterialTransferFormDetail" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ZMaterialTransferFormHRDetails" EntityType="sap_mobile.ZMaterialTransferFormHRDetail" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ZMaterialTransferFormHeaders" EntityType="sap_mobile.ZMaterialTransferFormHeader" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="ZWorkOrderInventoryCountDetails" EntityType="sap_mobile.ZWorkOrderInventoryCountDetail" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="ZWorkOrderInventoryCountHeaders" EntityType="sap_mobile.ZWorkOrderInventoryCountHeader" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <AssociationSet Name="Doc_S4ServiceOrderDoc_ASet" Association="sap_mobile.Doc_S4ServiceOrderDoc" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
@@ -27414,6 +27539,10 @@
                 <AssociationSet Name="S4ServiceRequest_OrderTransHistory_ASet" Association="sap_mobile.S4ServiceRequest_OrderTransHistory" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                     <End EntitySet="S4ServiceRequests" Role="FromRole_S4ServiceRequest_OrderTransHistory"/>
                     <End EntitySet="S4ServiceOrderTranHistories" Role="ToRole_S4ServiceRequest_OrderTransHistory"/>
+                </AssociationSet>
+                <AssociationSet Name="ZMTFHeader_MTFDetail_ASet" Association="sap_mobile.ZMTFHeader_MTFDetail" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZMaterialTransferFormHeaders" Role="FromRole_ZMTFHeader_MTFDetail"/>
+                    <End EntitySet="ZMaterialTransferFormDetails" Role="ToRole_ZMTFHeader_MTFDetail"/>
                 </AssociationSet>
                 <AssociationSet Name="S4ServiceQuotation_ErrorMessage_ASet" Association="sap_mobile.S4ServiceQuotation_ErrorMessage" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                     <End EntitySet="S4ServiceQuotations" Role="FromRole_S4ServiceQuotation_ErrorMessage"/>

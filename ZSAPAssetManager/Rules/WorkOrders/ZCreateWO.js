@@ -22,7 +22,9 @@ export default async function ZCreateWO(context) {
       let FuncLocId = ruleInputData[FindKeyInObject(ruleInputData, ['FuncLocId'])]
       let MaintenanceActivityType = ruleInputData[FindKeyInObject(ruleInputData, ['MaintenanceActivityType'])]
       let MaintPlant = context.binding.MaintPlant
-      let MaintWorkCenter = context.binding.MaintWorkCenter
+      //Get ExternalWorkCenterID from WorkCenters entity based on MaintWorkCenter and MaintPlant
+      let MaintenanceWorkCenter = await context.read('/SAPAssetManager/Services/AssetManager.service', 'WorkCenters', [], `$filter=WorkCenterId eq '${context.binding.MaintWorkCenter}' and PlantId eq '${context.binding.MaintPlant}'`);
+      let MaintWorkCenter = MaintenanceWorkCenter.getItem(0).ExternalWorkCenterId;
       let CostCenter = ruleInputData[FindKeyInObject(ruleInputData, ['CostCenter'])]
       let OperationDescription = ruleInputData[FindKeyInObject(ruleInputData, ['OperationDescription'])]
       let OrderDescription = ruleInputData[FindKeyInObject(ruleInputData, ['OrderDescription'])]
@@ -59,6 +61,10 @@ export default async function ZCreateWO(context) {
                                 "MaintenanceActivityType": MaintenanceActivityType
                             },
                             'CreateLinks': woLinks,
+                            "Headers": {
+                                "OfflineOData.RemoveAfterUpload": "true",
+                                "OfflineOData.TransactionID": "/SAPAssetManager/Rules/WorkOrders/CreateUpdate/WorkOrderLocalID.js"
+                            }
                         },
                     }).then(actionResult => {
         libCommon.setStateVariable(context, 'CreateWorkOrder', JSON.parse(actionResult.data));

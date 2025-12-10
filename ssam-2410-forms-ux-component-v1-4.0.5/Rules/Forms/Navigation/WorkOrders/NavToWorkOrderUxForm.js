@@ -58,6 +58,8 @@ export default async function NavToWorkOrderUxForm(context) {
     // and operation ID may not be present.
     const workOrderId = ruleInputData[FindKeyInObject(ruleInputData, ['workorderid', 'workorder-id', 'work-order-id'])]
     const operationId = ruleInputData[FindKeyInObject(ruleInputData, ['operationid', 'operation-id'])]
+    const creationDate = ruleInputData["ZCreationDate"]
+    // const creationTime = ruleInputData["ZCreationTime"]
     // If the form to be displayed is a "UX" form, the submission query options
     // is not required because UX forms do not generate submissions.
     let submissionQueryOptions = ""
@@ -89,6 +91,14 @@ export default async function NavToWorkOrderUxForm(context) {
         // Form ID is required only if it is possible for a work order operation
         // to have multiple forms associated with it. Otherwise, querying for the
         // form ID is superfluous but innocuous.
+        if (workOrderId.startsWith("LOCAL", 0)) {
+          submissionQueryOptions =
+          "$filter=" +
+          `definitionId eq '${formId}' and ` +
+          `(substringof('{"work-order-id":"${workOrderId}","CreationDate":"${creationDate}"}',headerInfo))`
+          "&$orderby=version desc&$top=1"
+          
+        } else {
         submissionQueryOptions =
           "$filter=" +
           `definitionId eq '${formId}' and ` +
@@ -98,6 +108,7 @@ export default async function NavToWorkOrderUxForm(context) {
           `substringof('"workorder_id":"${workOrderId}"',tolower(headerInfo)) or ` +
           `substringof('"work_order_id":"${workOrderId}"',tolower(headerInfo)))` +
           "&$orderby=version desc&$top=1"
+        }
       // }//PTEN
     }
 
@@ -115,3 +126,4 @@ export default async function NavToWorkOrderUxForm(context) {
     throw error
   }
 }
+ 

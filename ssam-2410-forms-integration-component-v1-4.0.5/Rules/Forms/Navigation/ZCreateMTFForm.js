@@ -11,7 +11,7 @@ import LogError from "../../../../MirataFormsCoreComponents/Rules/Forms/LogError
  * @returns {Promise<void>} Promise that resolves after navigation is complete
  * @throws {Error} If navigation fails, the error is logged and re-thrown
  */
-export default async function ZWorkOrderDetailForm(context) {
+export default async function ZCreateMTFForm(context) {
   try {
     
     let pageProxy;
@@ -21,12 +21,9 @@ export default async function ZWorkOrderDetailForm(context) {
       pageProxy = context;
     }
     
-    const bindingObject = context.getPageProxy().getActionBinding() || context.binding || context.getActionBinding() || {};
+    const bindingObject = {};
 
-    let formId = "pten-dev.form.preventative-maintenance-work-order-technical";
-    if(bindingObject.OrderType === 'PM01'){
-      formId = "pten-dev.form.corrective-work-order";
-    }
+    let formId = "pten-dev.form.inventory-transfer-template";
 
     bindingObject.FormId = formId;
     bindingObject.ContextData = {};
@@ -41,3 +38,4 @@ export default async function ZWorkOrderDetailForm(context) {
     throw error;
   }
 }
+ 

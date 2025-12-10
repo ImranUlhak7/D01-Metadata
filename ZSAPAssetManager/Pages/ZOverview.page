@@ -721,7 +721,8 @@
 							"ImagePosition": "Leading",
 							"FullWidth": false,
 							"Visible": true,
-							"Enabled": true
+							"Enabled": true,
+							"OnPress": "/MirataFormsIntegrationComponents/Rules/Forms/Navigation/ZCreateMTFForm.js"
 						}
 					],
 					"Layout": {

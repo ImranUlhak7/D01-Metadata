@@ -55,7 +55,7 @@ export default async function NavToInventoryUxForm(context) {
         submissionQueryOptions =
           "$filter=" +
           `definitionId eq '${formId}' and ` +
-          `(substringof('"OrderID":"${orderID}"',tolower(headerInfo)))` +
+          `(substringof('"OrderID":"${orderID}"',headerInfo))` +
           "&$orderby=version desc&$top=1"
     }
 
