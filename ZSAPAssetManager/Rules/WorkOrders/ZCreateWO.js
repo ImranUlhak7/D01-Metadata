@@ -26,8 +26,10 @@ export default async function ZCreateWO(context) {
       let MaintenanceWorkCenter = await context.read('/SAPAssetManager/Services/AssetManager.service', 'WorkCenters', [], `$filter=WorkCenterId eq '${context.binding.MaintWorkCenter}' and PlantId eq '${context.binding.MaintPlant}'`);
       let MaintWorkCenter = MaintenanceWorkCenter.getItem(0).ExternalWorkCenterId;
       let CostCenter = ruleInputData[FindKeyInObject(ruleInputData, ['CostCenter'])]
-      let OperationDescription = ruleInputData[FindKeyInObject(ruleInputData, ['OperationDescription'])]
+      let OperDescription = ruleInputData[FindKeyInObject(ruleInputData, ['OperationDescription'])]
       let OrderDescription = ruleInputData[FindKeyInObject(ruleInputData, ['OrderDescription'])]
+
+      let OperDescArray = OperDescription.split("___");
 
       let woLinks = [];
       let equipLink = context.createLinkSpecifierProxy(
@@ -90,10 +92,35 @@ export default async function ZCreateWO(context) {
                           `$filter=FuncLocIdIntern eq '${FuncLocId}'`,
                       );
           oprLinks.push(funcLocLink.getSpecifier());
-        return context.executeAction({'Name': '/ZSAPAssetManager/Actions/WorkOrders/ZWorkOrderOperationCreate.action', 'Properties': {
+        let woPartnerLink = context.createLinkSpecifierProxy(
+                              'WOPartners',
+                              'MyWorkOrderHeaders',
+                              '',
+                              woReadLink,
+                          );
+        let promises = [];
+        promises.push(context.executeAction({'Name': '/ZSAPAssetManager/Actions/WorkOrders/ZWorkOrderPartnerCreate.action', 'Properties': {
                             'Properties':
                             {
-                                "OperationNo": "/SAPAssetManager/Rules/WorkOrders/Operations/CreateUpdate/OperationLocalID.js",
+                             "OrderId": workOrder,
+                                "Partner": "/SAPAssetManager/Rules/Common/Partner/PartnerPersonnelNumberForWO.js",
+                                "PartnerFunction": "/SAPAssetManager/Rules/Common/Partner/PartnerFunction.js"
+                            },
+                            "Headers": {
+                                "OfflineOData.RemoveAfterUpload": "true",
+                                "OfflineOData.TransactionID": workOrder
+                            },
+                            'ParentLink': woPartnerLink.getSpecifier(),
+                        },
+                    }));
+        for (let i = 0; i < OperDescArray.length; i++) {
+            let OperationDescription = OperDescArray[i];
+            let operationId = 'L' + ('000' + (i + 1)).slice(-3);
+
+            promises.push(context.executeAction({'Name': '/ZSAPAssetManager/Actions/WorkOrders/ZWorkOrderOperationCreate.action', 'Properties': {
+                            'Properties':
+                            {
+                                "OperationNo": operationId,
                                 "OperationShortText": OperationDescription,
                                 "OperationEquipment": EquipId,
                                 "OperationFunctionLocation": FuncLocId,
@@ -107,29 +134,13 @@ export default async function ZCreateWO(context) {
                             },
                             'ParentLink': woLink.getSpecifier(),
                         },
-                    }).then(() => {
-            let woPartnerLink = context.createLinkSpecifierProxy(
-                              'WOPartners',
-                              'MyWorkOrderHeaders',
-                              '',
-                              woReadLink,
-                          );
-            return context.executeAction({'Name': '/ZSAPAssetManager/Actions/WorkOrders/ZWorkOrderPartnerCreate.action', 'Properties': {
-                            'Properties':
-                            {
-                             "OrderId": workOrder,
-                                "Partner": "/SAPAssetManager/Rules/Common/Partner/PartnerPersonnelNumberForWO.js",
-                                "PartnerFunction": "/SAPAssetManager/Rules/Common/Partner/PartnerFunction.js"
-                            },
-                            "Headers": {
-                                "OfflineOData.RemoveAfterUpload": "true",
-                                "OfflineOData.TransactionID": workOrder
-                            },
-                            'ParentLink': woPartnerLink.getSpecifier(),
-                        },
-                    }).then(() => {
+                    }));
+                }
+        return Promise.all(promises).then(async () => {
                  return NavToInitialWorkOrderUxForm(context);
-            });
+            }).catch(error => {
+                LogError(context, error, { component, mdkInfo: { errorInfo } } )
+                throw error
         });
     });
   } catch (error) {
@@ -139,3 +150,4 @@ export default async function ZCreateWO(context) {
     throw error
   }
 }
+ 
