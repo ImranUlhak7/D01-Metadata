@@ -7,5 +7,6 @@ export default async function EquipmentListFilterResults(context) {
     const newWcFilter = await createNewWorkCenterFilterCriteria(context, fcContainer.getControl('WorkCenterFilter').getFilterValue(), 'MaintWorkCenter');
     const newSeFilter = fcContainer.getControl('SuperiorEquipmentFilter').getFilterValue();
     const newFlFilter = fcContainer.getControl('FunctionalLocationFilter').getFilterValue();
-    return [sortFilter, statusFilter, newWcFilter, newSeFilter,newFlFilter].filter(i=> !!i);
+    const newEdFilter = fcContainer.getControl('EquipmentDescriptionFilter').getFilterValue();
+    return [sortFilter, statusFilter, newWcFilter, newSeFilter, newFlFilter, newEdFilter].filter(i=> !!i);
 }

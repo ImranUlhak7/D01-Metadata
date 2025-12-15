@@ -1,0 +1,29 @@
+{
+    "_Name": "EquipmentDescriptionFilter",
+    "_Type": "Control.Type.FormCell.ListPicker",
+    "AllowMultipleSelection": true,
+    "IsPickerDismissedOnSelection": true,
+    "AllowDefaultValueIfOneItem": true,
+    "IsSearchCancelledAfterSelection": true,
+    "Search": {
+        "Enabled": true,
+        "Delay": 500,
+        "MinimumCharacterThreshold": 3,
+        "Placeholder": "$(L,search)",
+        "BarcodeScanner": true
+    },
+    "Caption": "EquipmentDesc",
+    "PlaceHolder": "",
+    "Value": "{EquipDesc}",
+    "PickerItems": {
+        "DisplayValue": "{EquipDesc}",
+        "ReturnValue": "{EquipDesc}",
+        "Target": {
+            "EntitySet": "MyEquipments",
+            "Service": "/SAPAssetManager/Services/AssetManager.service",
+            "QueryOptions": "$filter=EquipDesc ne ''&$orderby=EquipDesc"
+        }
+    },
+    "FilterProperty": "EquipDesc",
+    "OnValueChange": "/SAPAssetManager/Rules/Filter/RedrawFilterToolbar.js"
+}

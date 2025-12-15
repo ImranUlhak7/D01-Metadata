@@ -80,6 +80,13 @@
                 "Properties": {
                     "FilterProperty": "FuncLocId"
                     }
+            },
+            {
+                "_Type": "Fragment",
+                "Fragment":"/ZSAPAssetManager/Pages/Fragments/Filter/EquipmentDescription.fragment",
+                "Properties": {
+                    "FilterProperty": "EquipDesc"
+                    }
             }]
         }],
         "_Name":"FormCellContainer",
