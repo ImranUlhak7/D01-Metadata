@@ -46,6 +46,10 @@
 		{
 			"Source": "/ZSAPAssetManager/Rules/QAB/QABSettings.js",
 			"Target": "/SAPAssetManager/Rules/QAB/QABSettings.js"
+		},
+		{
+			"Source": "/ZSAPAssetManager/Rules/OnlineSearch/Download/ZAssignToUser.js",
+			"Target": "/SAPAssetManager/Rules/OnlineSearch/Download/AssignToUser.js"
 		}
 	]
 }

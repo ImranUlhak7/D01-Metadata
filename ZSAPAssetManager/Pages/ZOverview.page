@@ -288,8 +288,17 @@
 						},
 						{
 							"SimplePropertyCell": {
+								"Value": "/ZSAPAssetManager/Rules/MaterialTransfer/ZMaterialTransferCount.js",
+								"_Name": "SectionSimplePropertyCell9",
+								"KeyName": "$(L,material_transfer)",
+								"AccessoryType": "DisclosureIndicator",
+								"OnPress": ""
+							}
+						},
+						{
+							"SimplePropertyCell": {
 								"Value": "/ZSAPAssetManager/Rules/Inventory/ZInventoryCount.js",
-								"_Name": "SectionSimplePropertyCell8",
+								"_Name": "SectionSimplePropertyCell10",
 								"KeyName": "$(L,inventory)",
 								"AccessoryType": "DisclosureIndicator",
 								"OnPress": "/MirataFormsUxComponents/Rules/Forms/Navigation/Inventory/NavToInitialInventoryUxForm.js"
