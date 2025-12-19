@@ -28,6 +28,7 @@ export default async function ZCreateWO(context) {
       let CostCenter = ruleInputData[FindKeyInObject(ruleInputData, ['CostCenter'])]
       let OperDescription = ruleInputData[FindKeyInObject(ruleInputData, ['OperationDescription'])]
       let OrderDescription = ruleInputData[FindKeyInObject(ruleInputData, ['OrderDescription'])]
+      let Priority = ruleInputData[FindKeyInObject(ruleInputData, ['Priority'])]
 
       let OperDescArray = OperDescription.split("___");
 
@@ -53,7 +54,7 @@ export default async function ZCreateWO(context) {
                                 "OrderDescription": OrderDescription,
                                 "PlanningPlant": MaintPlant,
                                 "OrderType": "PM01",
-                                "Priority": "1",
+                                "Priority": Priority,
                                 "HeaderFunctionLocation": FuncLocId,
                                 "HeaderEquipment": EquipId,
                                 "MainWorkCenterPlant": MaintPlant,
@@ -137,7 +138,8 @@ export default async function ZCreateWO(context) {
                     }));
                 }
         return Promise.all(promises).then(async () => {
-                 return NavToInitialWorkOrderUxForm(context);
+              return context.executeAction("/ZSAPAssetManager/Actions/OverviewPage/OverviewPageNav.action")
+                //   return NavToInitialWorkOrderUxForm(context);
             }).catch(error => {
                 LogError(context, error, { component, mdkInfo: { errorInfo } } )
                 throw error
@@ -150,4 +152,3 @@ export default async function ZCreateWO(context) {
     throw error
   }
 }
- 

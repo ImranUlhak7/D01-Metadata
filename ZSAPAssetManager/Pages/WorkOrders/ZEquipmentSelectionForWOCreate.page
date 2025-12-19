@@ -1,0 +1,55 @@
+{
+	"_Type": "Page",
+	"_Name": "ZEquipmentSelectionForWOCreate",
+    "Caption": "$(L,select_equip_wocreate)",
+	"ActionBar":
+	{
+		"_Name": "EquipmentList",
+		"Items": [
+			{
+				"Position": "left",
+				"_Name": "Cancel",
+				"SystemItem": "Cancel",
+	            "Caption":"$(L,cancel)",
+				"Text": "$(L,cancel)",
+				"OnPress": "/SAPAssetManager/Actions/Page/CancelPage.action"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+                {
+                    "EmptySection": {
+                        "Caption": "$(L,no_equipment_available)"
+                    },
+                    "Search": {
+                        "Enabled": true,
+                        "Delay": 500,
+                        "MinimumCharacterThreshold": 3,
+                        "Placeholder": "$(L,search)",
+                        "BarcodeScanner": true
+                    },
+                    "Footer": {
+                        "Caption": "$(L,see_all)",
+                        "Visible": false
+                    },
+                    "ObjectCell": {     
+                        "AccessoryType": "DisclosureIndicator",
+                        "Title": "{{#Property:EquipId}} - {{#Property:EquipDesc}}",
+                        "PreserveIconStackSpacing": false,
+                        "OnPress": "/MirataFormsIntegrationComponents/Rules/Forms/Navigation/ZCreateWOPressEventHandler.js"
+                    },
+                    "Target": {
+                        "EntitySet": "MyEquipments",
+                        "Service": "/SAPAssetManager/Services/AssetManager.service",
+                        "QueryOptions": "$orderby=EquipId&$expand=FunctionalLocation"
+                    },
+                    "_Type": "Section.Type.ObjectTable"
+                }
+			],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name" : "SectionedTable"
+		}
+	]
+}

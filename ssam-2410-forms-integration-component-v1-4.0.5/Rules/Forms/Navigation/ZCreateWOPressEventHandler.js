@@ -22,7 +22,11 @@ export default async function ZCreateWOPressEventHandler(context) {
     }
 
     let formId = "pten-dev.form.create-work-order";
-    const bindingObject = pageProxy.binding || {};
+    let bindingObject = pageProxy.binding || {};
+
+    if(bindingObject.EquipId === undefined || bindingObject.EquipId === null || bindingObject.EquipId === ''){
+      bindingObject = pageProxy.getActionBinding()
+    }
 
     bindingObject.FormId = formId;
     bindingObject.ContextData = {};

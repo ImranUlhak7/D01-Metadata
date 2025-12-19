@@ -16,10 +16,6 @@
 			"Target": "/SAPAssetManager/Rules/OverviewPage/MyWorkSection/MyWorkSectionQueryOption.js"
 		},
 		{
-			"Source": "/ZSAPAssetManager/Rules/QAB/ZQABSettings.js",
-			"Target": "/SAPAssetManager/Rules/QAB/QABSettings.js"
-		},
-		{
 			"Source": "/ZSAPAssetManager/Pages/Equipment/ZEquipmentFilter.page",
 			"Target": "/SAPAssetManager/Pages/Equipment/EquipmentFilter.page"
 		},
@@ -38,6 +34,18 @@
 		{
 			"Source": "/ZSAPAssetManager/Rules/OnlineSearch/WorkOrders/ZAccessoryButtonIcon.js",
 			"Target": "/SAPAssetManager/Rules/OnlineSearch/WorkOrders/AccessoryButtonIcon.js"
+		},
+		{
+			"Source": "/ZSAPAssetManager/i18n/i18n.properties",
+			"Target": "/SAPAssetManager/i18n/i18n.properties"
+		},
+		{
+			"Source": "/ZSAPAssetManager/i18n/i18n_en.properties",
+			"Target": "/SAPAssetManager/i18n/i18n_en.properties"
+		},
+		{
+			"Source": "/ZSAPAssetManager/Rules/QAB/QABSettings.js",
+			"Target": "/SAPAssetManager/Rules/QAB/QABSettings.js"
 		}
 	]
 }
