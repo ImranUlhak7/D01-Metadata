@@ -1,4 +1,6 @@
 import LogError from "../../../../MirataFormsCoreComponents/Rules/Forms/LogError"
+import ZGetPlantRigList from "../../../../ZSAPAssetManager/Rules/MTF/ZGetPlantRigList"
+import libCom from "../../../../SAPAssetManager/Rules/Common/Library/CommonLibrary"
 
 /**
  * Handles the press event for the Mirata Forms toolbar icon on the Work Order
@@ -28,6 +30,10 @@ export default async function ZCreateMTFForm(context) {
     bindingObject.FormId = formId;
     bindingObject.ContextData = {};
     
+    bindingObject.DefaultPlant = libCom.getUserDefaultPlant();
+    const plantRigList = await ZGetPlantRigList(context);
+    bindingObject.PlantRigList = plantRigList;
+
     pageProxy.setActionBinding(bindingObject);
     return pageProxy.executeAction("/MirataFormsIntegrationComponents/Actions/Forms/Navigation/FormsExtensionPageNav.action");
 
@@ -38,4 +44,3 @@ export default async function ZCreateMTFForm(context) {
     throw error;
   }
 }
- 

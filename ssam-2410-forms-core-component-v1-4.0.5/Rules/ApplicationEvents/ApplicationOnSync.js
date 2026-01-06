@@ -43,10 +43,10 @@ export default async function ApplicationOnSync(clientAPI) {
             ]
             return EsriLibrary.callESRIAuthenticate(clientAPI, actions, false, true);
         }
-        await clientAPI.executeAction('/SAPAssetManager/Actions/SyncInitializeProgressBannerMessage.action');
+        await clientAPI.executeAction('/MirataFormsCoreComponents/Actions/Sync/SyncInitializeProgressBannerMessage-Forms.action')
         try {
             // Once the SSAM sync is complete, we can initiate the Mirata Forms sync
-            return clientAPI.executeAction('/MirataFormsCoreComponents/Actions/Sync/SyncInitializeProgressBannerMessage-Forms.action')
+            return clientAPI.executeAction('/SAPAssetManager/Actions/SyncInitializeProgressBannerMessage.action');
         } catch (error) {
             const component = "Mirata synchronization"
             await LogError(clientAPI, error, { component })
