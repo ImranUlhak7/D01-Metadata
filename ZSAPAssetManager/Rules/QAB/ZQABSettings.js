@@ -90,7 +90,7 @@ class QABSettingsHelpers {
                 'IsEnabled': enableCreate,
                 'IsButtonEnabled': enableCreate,
                 'IsButtonVisible': enableCreate,
-                'Action': '/SAPAssetManager/Rules/WorkOrders/CreateUpdate/WorkOrderCreateNav.js',
+                'Action': '/ZSAPAssetManager/Actions/WorkOrders/ZWOCreateEquipmentListNav.action',
                 '_Name': 'ADD_WORK_ORDER',
             }, ...props,
         });

@@ -44,13 +44,16 @@
 			"Target": "/SAPAssetManager/i18n/i18n_en.properties"
 		},
 		{
-			"Source": "/ZSAPAssetManager/Rules/QAB/QABSettings.js",
-			"Target": "/SAPAssetManager/Rules/QAB/QABSettings.js"
-		},
-		{
 			"Source": "/ZSAPAssetManager/Rules/OnlineSearch/Download/ZAssignToUser.js",
 			"Target": "/SAPAssetManager/Rules/OnlineSearch/Download/AssignToUser.js"
+		},
+		{
+			"Source": "/ZSAPAssetManager/Rules/OverviewPage/OverviewQABSettings.js",
+			"Target": "/SAPAssetManager/Rules/OverviewPage/OverviewQABSettings.js"
+		},
+		{
+			"Source": "/ZSAPAssetManager/Rules/QAB/ZQABSettings.js",
+			"Target": "/SAPAssetManager/Rules/QAB/QABSettings.js"
 		}
-		
 	]
 }
