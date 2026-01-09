@@ -292,7 +292,7 @@
         "_Name": "SectionSimplePropertyCell9",
         "KeyName": "$(L,material_transfer)",
         "AccessoryType": "DisclosureIndicator",
-        "OnPress": "/MirataFormsUxComponents/Rules/Forms/Navigation/Inventory/NavToInitialMTFUxForm.js"
+        "OnPress": "/MirataFormsUxComponents/Rules/Forms/Navigation/MTF/NavToInitialMTFUxForm.js"
        }
       },
       {

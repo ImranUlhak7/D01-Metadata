@@ -24,10 +24,6 @@
 			"Target": "/SAPAssetManager/Rules/Equipment/EquipmentListFilterResults.js"
 		},
 		{
-			"Source": "/ZSAPAssetManager/Rules/OverviewPage/ZOverviewQABSettings.js",
-			"Target": "/SAPAssetManager/Rules/OverviewPage/OverviewQABSettings.js"
-		},
-		{
 			"Source": "/ZSAPAssetManager/Rules/QAB/ZEquipmentFunctionalLocationQABSettings.js",
 			"Target": "/SAPAssetManager/Rules/QAB/EquipmentFunctionalLocationQABSettings.js"
 		},
@@ -50,10 +46,6 @@
 		{
 			"Source": "/ZSAPAssetManager/Rules/OverviewPage/OverviewQABSettings.js",
 			"Target": "/SAPAssetManager/Rules/OverviewPage/OverviewQABSettings.js"
-		},
-		{
-			"Source": "/ZSAPAssetManager/Rules/QAB/ZQABSettings.js",
-			"Target": "/SAPAssetManager/Rules/QAB/QABSettings.js"
 		}
 	]
 }

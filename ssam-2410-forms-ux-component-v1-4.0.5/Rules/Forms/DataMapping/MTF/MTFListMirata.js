@@ -1,6 +1,6 @@
 import LogError from "../../../../../MirataFormsCoreComponents/Rules/Forms/LogError"
 /**
-  * Retrieves and processes Inventory data.
+  * Retrieves and processes MTF data.
   *
   *
   * Functions are called to build the appropriate query option statements; see these functions for details
@@ -9,22 +9,22 @@ import LogError from "../../../../../MirataFormsCoreComponents/Rules/Forms/LogEr
   *
   * @param {IClientAPI} context - The client context object
   *
-  * @returns {Promise<Array<Object>>} An array of Inventory
+  * @returns {Promise<Array<Object>>} An array of MTF
   *
-  * @throws {Error} If there's an error reading or processing the Inventory data
+  * @throws {Error} If there's an error reading or processing the MTF data
   * @throws {Error} If suboperation assignment type is used (not yet supported)
   */
-export default async function InventoryListMirata(context) {
+export default async function MTFListMirata(context) {
   try {
     let listArray = [];
-    let queryOptions = '$expand=ZWorkOrderInventoryCountDetail_Nav&$orderby=OrderID';
-    // Get the list of assigned work orders.
-    listArray = await context.read("/SAPAssetManager/Services/AssetManager.service", "ZWorkOrderInventoryCountHeaders", [], queryOptions)
-    // Return the work order or operation data.
+    let queryOptions = '$expand=ZMaterialTransferFormDetail_Nav&$orderby=MaterialDocumentNumber';
+    
+    listArray = await context.read("/SAPAssetManager/Services/AssetManager.service", "ZMaterialTransferFormHeaders", [], queryOptions)
+    
     return listArray
   } catch (error) {
     const component = "IntegrationDataMapping"
-    const errorInfo = "Error compiling Inventory List array"
+    const errorInfo = "Error compiling MTF List array"
     await LogError(context, error, { component, mdkInfo: { errorInfo } } )
     throw error
   }

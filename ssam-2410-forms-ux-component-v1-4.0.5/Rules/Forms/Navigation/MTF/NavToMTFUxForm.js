@@ -46,12 +46,12 @@ export default async function NavToMTFUxForm(context) {
 
     // If the form to be displayed is a "UX" form, an associated work order ID
     // and operation ID may not be present.
-    const orderID = ruleInputData[FindKeyInObject(ruleInputData, ['MaterialDocumentNumber'])]
+    const MaterialDocumentNumber = ruleInputData[FindKeyInObject(ruleInputData, ['MaterialDocumentNumber'])]
     // If the form to be displayed is a "UX" form, the submission query options
     // is not required because UX forms do not generate submissions.
     let submissionQueryOptions = ""
 
-    if (orderID) {
+    if (MaterialDocumentNumber) {
         submissionQueryOptions =
           "$filter=" +
           `definitionId eq '${formId}' and ` +
