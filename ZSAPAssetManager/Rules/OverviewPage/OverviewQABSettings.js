@@ -49,9 +49,9 @@ export default class OverviewQABSettings extends QABSettings {
 
         return super._createRecordTimeChip({
             'Label': this._context.localizeText('confirmation_create_title'),
-            'IsEnabled': enable,
-            'IsButtonEnabled': enable,
-            'IsButtonVisible': isConfirmationEnabled,
+            'IsEnabled': false,
+            'IsButtonEnabled': false,
+            'IsButtonVisible': false,
             'Action': '/SAPAssetManager/Rules/Confirmations/CreateUpdate/ConfirmationCreateUpdateNav.js',
             '_Name': 'RECORD_TIME_CONFIRMATION',
         });

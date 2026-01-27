@@ -28,8 +28,16 @@ export default async function ZCreateMTFForm(context) {
     let formId = "pten-dev.form.inventory-transfer-template";
 
     bindingObject.FormId = formId;
-    bindingObject.ContextData = {};
-    
+
+    let zdate = (new Date()).toISOString().replace(/[:\-]/g, '').split('.')[0];
+
+    bindingObject.FormSubmissionQueryOptions = "$filter=" +
+        `(substringof('"MaterialDocumentNumber":"${zdate}"',headerInfo))` +
+        "&$orderby=version desc&$top=1"
+
+    bindingObject.ContextData = `MaterialDocumentNumber#: ${zdate}`;
+    bindingObject.MaterialDocumentNumber = zdate
+
     bindingObject.DefaultPlant = libCom.getUserDefaultPlant();
     const plantRigList = await ZGetPlantRigList(context);
     bindingObject.PlantRigList = plantRigList;
@@ -44,3 +52,4 @@ export default async function ZCreateMTFForm(context) {
     throw error;
   }
 }
+ 

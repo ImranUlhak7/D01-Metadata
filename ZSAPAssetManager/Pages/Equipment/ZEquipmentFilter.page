@@ -72,7 +72,28 @@
                 "Fragment":"/ZSAPAssetManager/Pages/Fragments/Filter/SuperiorEquipment.fragment",
                 "Properties": {
                     "FilterProperty": "SuperiorEquip"
-                    }
+                }
+            },
+            {
+                "_Type": "Fragment",
+                "Fragment":"/ZSAPAssetManager/Pages/Fragments/Filter/ModelNumber.fragment",
+                "Properties": {
+                    "FilterProperty": "ModelNum"
+                }
+            },
+            {
+                "_Type": "Fragment",
+                "Fragment":"/ZSAPAssetManager/Pages/Fragments/Filter/ManufacturerSerialNumber.fragment",
+                "Properties": {
+                    "FilterProperty": "ManufSerialNo"
+                }
+            },
+            {
+                "_Type": "Fragment",
+                "Fragment":"/ZSAPAssetManager/Pages/Fragments/Filter/EquipmentType.fragment",
+                "Properties": {
+                    "FilterProperty": "EquipType"
+                }
             },
             {
                 "_Type": "Fragment",

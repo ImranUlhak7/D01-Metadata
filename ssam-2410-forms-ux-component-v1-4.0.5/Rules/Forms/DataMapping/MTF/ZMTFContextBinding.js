@@ -28,6 +28,28 @@ export default async function ZMTFContextBinding(context) {
     result = await context.read("/SAPAssetManager/Services/AssetManager.service", "ZMaterialTransferFormHeaders", [], queryOptions)
     if (result && result.getItem(0)) {
       binding = result.getItem(0)
+      if(!binding.IssueDate){
+        binding.IssueDate = "0";
+      }
+      if(!binding.PickUpDate){
+        binding.PickUpDate = "0";
+      }
+      if(!binding.ReceivedDate){
+        binding.ReceivedDate = "0";
+      }
+      if(!binding.AuthorizationDate){
+        binding.AuthorizationDate = "0";
+      }
+      if(!binding.ChangedOn){
+        binding.ChangedOn = "0";
+      }
+      if(!binding.CreatedOn){
+        binding.CreatedOn = "0";
+      }
+      if(!binding.DeliveryDate){
+        binding.DeliveryDate = "0";
+      }
+
     } else {
       throw new Error(`Error obtaining ${MaterialDocumentNumber} data context for UX form`)
     }

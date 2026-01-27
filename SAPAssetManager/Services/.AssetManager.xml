@@ -1316,6 +1316,7 @@
                 <Property Name="LastName" Type="Edm.String" Nullable="false" MaxLength="40" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Last Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="PersonnelNumber" Type="Edm.String" Nullable="false" MaxLength="8" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Personnel No." sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="PartnerNumber" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Partner" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ZWorkCenter" Type="Edm.String" Nullable="false" MaxLength="40" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Work Centre" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <NavigationProperty Name="CatsTimesheet" Relationship="sap_mobile.Employee_CatsTimesheet" FromRole="FromRole_Employee_CatsTimesheet" ToRole="ToRole_Employee_CatsTimesheet"/>
                 <NavigationProperty Name="Confirmations" Relationship="sap_mobile.Employee_Confirmation" FromRole="FromRole_Employee_Confirmation" ToRole="ToRole_Employee_Confirmation"/>
                 <NavigationProperty Name="CrewListItem" Relationship="sap_mobile.Employee_CrewListItem" FromRole="FromRole_Employee_CrewListItem" ToRole="ToRole_Employee_CrewListItem"/>
@@ -9954,6 +9955,7 @@
             <EntityType Name="ZMTFRigPlant" sap:content-version="1">
                 <Key>
                     <PropertyRef Name="Plant"/>
+                    <PropertyRef Name="RigCharacter"/>
                 </Key>
                 <Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="PlantDescription" Type="Edm.String" Nullable="false" MaxLength="40" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
@@ -9962,6 +9964,7 @@
             <EntityType Name="ZMaterialTransferFormDetail" sap:content-version="1">
                 <Key>
                     <PropertyRef Name="MaterialDocumentNumber"/>
+                    <PropertyRef Name="LineNumber"/>
                 </Key>
                 <Property Name="MaterialDocumentNumber" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="MTF Document Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="ChangedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Changed By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
@@ -9974,7 +9977,6 @@
                 <Property Name="Manufacturer" Type="Edm.String" Nullable="false" MaxLength="30" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Manufacturer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="ModelNumber" Type="Edm.String" Nullable="false" MaxLength="20" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Model number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="SerialNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Manuf. SerialNr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="LineNumber" Type="Edm.String" Nullable="false" MaxLength="4" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Line Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="UOM" Type="Edm.String" Nullable="false" MaxLength="3" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Base Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
                 <Property Name="ChangedOnDate" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Changed On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="CreatedOn" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Created On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
@@ -9985,6 +9987,7 @@
                 <Property Name="Width" Type="Edm.String" MaxLength="13" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Width" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="ChangedAt" Type="Edm.Time" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Time of change" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="CreatedAtTime" Type="Edm.Time" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LineNumber" Type="Edm.String" Nullable="false" MaxLength="4" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Line Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
             </EntityType>
             <EntityType Name="ZMaterialTransferFormHRDetail" sap:content-version="1">
                 <Key>
@@ -10064,6 +10067,13 @@
                 <Property Name="CreatedAt" Type="Edm.Time" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <NavigationProperty Name="ZMaterialTransferFormDetail_Nav" Relationship="sap_mobile.ZMTFHeader_MTFDetail" FromRole="FromRole_ZMTFHeader_MTFDetail" ToRole="ToRole_ZMTFHeader_MTFDetail"/>
             </EntityType>
+            <EntityType Name="ZSuperiorEquipment" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SuperiorEquipment"/>
+                </Key>
+                <Property Name="SuperiorEquipment" Type="Edm.String" Nullable="false" MaxLength="18" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Superord.Equip." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="40" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
             <EntityType Name="ZWorkOrderInventoryCountDetail" sap:content-version="1">
                 <Key>
                     <PropertyRef Name="OrderID"/>
@@ -10071,7 +10081,7 @@
                     <PropertyRef Name="MaintenancePlan"/>
                 </Key>
                 <Property Name="OrderID" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Order" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="FoundByScan" Type="Edm.String" Nullable="false" MaxLength="1" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="ScanVerify/ManVerify" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FoundByScan" Type="Edm.String" Nullable="false" MaxLength="1" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Scan Verified" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="ChangedOn" Type="Edm.DateTime" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Changed On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="ChangedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Changed By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="ChangeTime" Type="Edm.Time" Precision="0" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Time of change" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
@@ -10096,6 +10106,7 @@
                 <Property Name="GeoLong" Type="Edm.String" Nullable="false" MaxLength="50" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Scanned Longitude" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="Client" Type="Edm.String" Nullable="false" MaxLength="3" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Client" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="Comment" Type="Edm.String" Nullable="false" MaxLength="100" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Comment" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ManuallyVerified" Type="Edm.String" Nullable="false" MaxLength="1" sap:custom_label="" sap:is_extension_field="false" sap:searchable="false" sap:visible_detail="false" sap:visible_list="false" sap:label="Manually Verified" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
             </EntityType>
             <EntityType Name="ZWorkOrderInventoryCountHeader" sap:content-version="1">
                 <Key>
@@ -26075,6 +26086,7 @@
                 <EntitySet Name="ZMaterialTransferFormDetails" EntityType="sap_mobile.ZMaterialTransferFormDetail" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="ZMaterialTransferFormHRDetails" EntityType="sap_mobile.ZMaterialTransferFormHRDetail" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="ZMaterialTransferFormHeaders" EntityType="sap_mobile.ZMaterialTransferFormHeader" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ZSuperiorEquipments" EntityType="sap_mobile.ZSuperiorEquipment" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="ZWorkOrderInventoryCountDetails" EntityType="sap_mobile.ZWorkOrderInventoryCountDetail" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="ZWorkOrderInventoryCountHeaders" EntityType="sap_mobile.ZWorkOrderInventoryCountHeader" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <AssociationSet Name="Doc_S4ServiceOrderDoc_ASet" Association="sap_mobile.Doc_S4ServiceOrderDoc" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">

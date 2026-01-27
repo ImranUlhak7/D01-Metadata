@@ -8,7 +8,7 @@ export default function AssignToUser(context) {
     const binding = pageProxy.getActionBinding();
     const personnelNumber = libCom.getPersonnelNumber();
     const sap_userid = GlobalVar.getUserSystemInfo().get('SAP_USERID');
-    context.setActionBinding({ ...binding, EmployeeTo: sap_userid, EmployeeFrom: binding.AssignedTo, OperationNo: binding.OperationNo || '', SubOperationNo: binding.SubOperationNo || '' });
+    context.setActionBinding({ ...binding, EmployeeTo: personnelNumber, EmployeeFrom: binding.AssignedTo, OperationNo: binding.OperationNo || '', SubOperationNo: binding.SubOperationNo || '' });
 
     return context.executeAction('/SAPAssetManager/Actions/Supervisor/Assign/WorkOrderAssignOnline.action')
         .catch((error) => {

@@ -88,7 +88,9 @@ import GetWorkOrderTypeDescription from './Utility/GetWorkOrderTypeDescription';
   mirataDataBinding.WorkCenterInternalId = workOrderHeaderSSAM.WorkCenterInternalId
 
   // Add the descriptions of the equipment and functional location
-  mirataDataBinding.HeaderEquipmentDesc = await GetEquipmentDescription(context, mirataDataBinding.HeaderEquipment)
+  let equipment = await GetEquipmentDescription(context, mirataDataBinding.HeaderEquipment)
+  mirataDataBinding.HeaderEquipmentDesc = equipment.EquipDesc
+  mirataDataBinding.HeaderEquipmentSuperiorEquip = equipment.SuperiorEquip
   mirataDataBinding.HeaderFunctionalLocationDesc = await GetFunctionalLocationDescription(context, mirataDataBinding.HeaderFunctionalLocation)
   // Add the description of the work order type
   mirataDataBinding.OrderTypeDesc = await GetWorkOrderTypeDescription(context, mirataDataBinding.PlanningPlant, mirataDataBinding.OrderType)

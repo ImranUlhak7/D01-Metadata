@@ -1,5 +1,5 @@
 {
-    "_Name": "SuperiorEquipmentFilter",
+    "_Name": "ModelNumberFilter",
     "_Type": "Control.Type.FormCell.ListPicker",
     "AllowMultipleSelection": true,
     "IsPickerDismissedOnSelection": true,
@@ -12,18 +12,18 @@
         "Placeholder": "$(L,search)",
         "BarcodeScanner": true
     },
-    "Caption": "SuperiorEquipm",
+    "Caption": "ModelNumber",
     "PlaceHolder": "",
-    "Value": "{SuperiorEquipment}",
+    "Value": "{ModelNum}",
     "PickerItems": {
-        "DisplayValue": "{SuperiorEquipment}",
-        "ReturnValue": "{SuperiorEquipment}",
+        "DisplayValue": "{ModelNum}",
+        "ReturnValue": "{ModelNum}",
         "Target": {
-            "EntitySet": "ZSuperiorEquipments",
+            "EntitySet": "MyEquipments",
             "Service": "/SAPAssetManager/Services/AssetManager.service",
-            "QueryOptions": "$orderby=SuperiorEquipment"
+            "QueryOptions": "$select=ModelNum&$filter=ModelNum ne ''&$orderby=ModelNum"
         }
     },
-    "FilterProperty": "SuperiorEquip",
+    "FilterProperty": "ModelNum",
     "OnValueChange": "/SAPAssetManager/Rules/Filter/RedrawFilterToolbar.js"
 }
